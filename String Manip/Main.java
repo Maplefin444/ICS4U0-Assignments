@@ -1,3 +1,10 @@
+/*
+James Huynh
+Ms. Krasteva IC4U0 String Manipulation
+Feb 4 2022
+This program will ask for a string and an index, then remove the character at the index.
+*/
+
 import java.util.*;
 
 public class Main{
