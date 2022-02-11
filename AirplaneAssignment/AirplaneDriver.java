@@ -34,6 +34,7 @@ public class AirplaneDriver
       airplane1.normalFlight(20);
       airplane1.prepLanding();
       airplane1.land();
+      airplane1.openDoor();
       airplane1.unloadPass();
       
       System.out.println();
