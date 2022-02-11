@@ -1,3 +1,9 @@
+/*
+Pradyumn Jha, James Huynh
+Ms. Krasteva ICS4U0 OOP Assignment 2
+Feb 10 2022
+This program will run all the methods in the class Airplane, and simulate an airplane.
+*/
 public class AirplaneDriver
 {
 
