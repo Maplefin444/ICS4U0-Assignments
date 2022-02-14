@@ -7,7 +7,7 @@ This program will run all the methods in the class Airplane, and simulate an air
 public class AirplaneDriver
 {
 
-
+   // The main method responsible for executing other methods
    public static void main (String[] args)
    {
       Airplane airplane1 = new Airplane(20, "Down.", "Open.", 0);
