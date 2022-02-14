@@ -62,8 +62,11 @@ public class Windows_Thirteen extends Operating_System{
    //Randomizes the amount of viruses on your system
    public String virusCheck(){
       if(status){
-         if(getAntiVirus() != null && !getAntiVirus().equals("")){
-            return "Scan complete, " + Math.floor(Math.random()*(10000)+1) + " viruses were found, but we're not gonna tell you where they are.";
+         if(currentBal >= 10 && getAntiVirus() != null && !getAntiVirus().equals("")){
+            return "Scan complete, " + (int) Math.random()*(10000)+1 + " viruses were found, but we're not gonna tell you where they are.";
+         }
+         else if(currentBal < 10){
+            return "Out of money, please purchase WindowsAV for $20.99";
          }
          return "No antivirus installed, please purchase WindowsAV for $20.99";
       }
