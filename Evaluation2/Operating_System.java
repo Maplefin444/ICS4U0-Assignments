@@ -7,7 +7,7 @@ public class Operating_System{
    private int bitVersion;
    public int numOfConnectedDevices;
    private int userAmount = 1;
-   private String antiVirus;
+   private String antiVirus = "";
    public int fileAmount;
    private String ipAddress;
    public boolean status;
