@@ -71,6 +71,6 @@ public class Windows_Thirteen extends Operating_System{
    }
    //Returns a sarcastic message about windows thirteen
    public String accessPersonalData(){
-      return "Windows Thirteen totally does not store every single piece of data related to you.";
+      return "Windows Thirteen totally does not store every single piece of data related to you... ;)";
    }
 }

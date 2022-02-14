@@ -5,7 +5,7 @@ public class OpSysDriver
    {
    
       Operating_System os = new Operating_System(32000, "Prady", 1.0, 32, 1, "20.184.17.216");
-
+   
       System.out.println("The memory of this Operating System at purchase is " + os.getMemAmount() + " mb.");  
       System.out.println("The bit version of this Operating System at purchase is " + os.getBitVersion() + ".");
       System.out.println("There are " + os.getUserAmount() + " user(s) using your Operating System.");
@@ -31,6 +31,7 @@ public class OpSysDriver
       System.out.println(os.boot() + ".");
       System.out.println(os.runFile("Do Not Open"));
       System.out.println(os.virusCheck());
-      }
+      
+   }
 
 }
