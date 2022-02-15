@@ -109,7 +109,6 @@ public class OpSysDriver
       try{Thread.sleep(5000);} catch(Exception e){}
       System.out.println();
       System.out.println("New functionality: ");
-      System.out.print("Checking software: ");
       System.out.println("Checking software: " + wt.checkSoftware());
       System.out.println("Logging in with password: 123     " + wt.logIn("123"));
       System.out.println("Logging in with password: abc123     " + wt.logIn("abc123"));
