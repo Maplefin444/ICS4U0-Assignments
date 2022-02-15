@@ -7,19 +7,58 @@ This class inherits the Operating_System class, and simulates a fictional operat
 
 public class Windows_Thirteen extends Operating_System{
    private double currentBal;
+   public int date = 0;
+   public String browser;
+   public String IDE;
+   private int connectedDevices;
+   private int currPerms;
+   private int desktopNum;
+   public int pictures;
+   private String password;
+   public String time;
    //Builds the class, uses super() to access the superclass's constructor
-   public Windows_Thirteen(long m, String uname, double vers, int bitVers, int deviceNum, String ip, double bal){
+   public Windows_Thirteen(long m, String uname, double vers, int bitVers, int deviceNum, String ip, double bal, int dev, int pe, int dn, String pw){
       super(m,uname,vers,bitVers,deviceNum,ip);
       currentBal = bal;
+      connectedDevices = dev;
+      currPerms = pe;
+      desktopNum = dn;
+      password = pw;
    }
-   //Returns the balance of the user
+   //These methods return the specified variable
    public double getBal(){
       return currentBal;
    }
-   //Sets the balance of the user
+   public int getDevices(){
+      return connectedDevices;
+   }
+   public int getPerms(){
+      return currPerms;
+   }
+   public int getDNum(){
+      return desktopNum;
+   }
+   public String getPass(){
+      return password;
+   }
+
+   //These methods set the specified variable to the inputted value
    public void setBal(double bal){
       currentBal = bal;
    }
+   public void setDevices(int num){
+      connectedDevices = num;
+   }
+   public void setPerms(int p){
+      currPerms = p;
+   }
+   public void setDNum(int num){
+      desktopNum = num;
+   }
+   public void setPass(String p){
+      password = p;
+   }
+
    //Adds a certain number of files if you have the memory and the money to do so
    public String addFiles(int amt){
       if(status && currentBal >= 1.0){
@@ -72,8 +111,32 @@ public class Windows_Thirteen extends Operating_System{
       }
       return "Computer is off.";
    }
-   //Returns a sarcastic message about windows thirteen
-   public String accessPersonalData(){
-      return "Windows Thirteen totally does not store every single piece of data related to you... ;)";
+   //Sets browser to microsoft edge, and IDE to vscode, and sends back a message
+   public String checkSoftware(){
+      browser = "Microsoft Edge";
+      IDE = "Visual Studio Code";
+      return "Your browser has been set to Edge, and your IDE has been set to VSCode :)";
+   }
+   
+   //Checks if the input = pass, if not, still lets you in :)
+   public String logIn(String pass){
+      if(pass.equals(password)){
+         return "Log-in was successful!";
+      }
+      return "Log-in didn't work, but you seem nice, so we'll let you in.";
+   }
+   
+   //Just returns that all your drivers are out of date
+   public String downloadDrivers(){
+      return "All drivers are out of date, but you don't need to worry about that.";
+   }
+   //Increases pictures by 1, and sends a sound effect
+   public String takePicture(){
+      pictures++;
+      return "Click!";
+   }
+   //Increases day by 1
+   public void nextDay(){
+      date++;
    }
 }

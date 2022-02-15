@@ -47,7 +47,7 @@ public class OpSysDriver
       
       System.out.println("With Windows Thirteen:");
       System.out.println();
-      Windows_Thirteen wt = new Windows_Thirteen(128000, "Prady", 1.0, 128, 1, "127.1.1.1",100.0);
+      Windows_Thirteen wt = new Windows_Thirteen(128000, "Prady", 1.0, 128, 1, "127.1.1.1",100.0, 1, 7, 1, "password");
       System.out.println("Post Purchase: ");
       System.out.println("The memory of this system at purchase is " + wt.getMemAmount() + " mb.");  
       System.out.println("The bit version of this system at purchase is " + wt.getBitVersion() + ".");
@@ -55,6 +55,10 @@ public class OpSysDriver
       System.out.println("The antivirus currently on this system at purchase is " + wt.getAntiVirus() + ".");
       System.out.println("The ip address you are using this system at is " + wt.getIPAddress() + ".");
       System.out.println("The balance of the account is currently: $" + wt.getBal());
+      System.out.println("The amount of connected devices is: " + wt.getDevices());
+      System.out.println("The current permission level is: " + wt.getPerms());
+      System.out.println("The desktop that is currently open is desktop #" + wt.getDNum());
+      System.out.println("The current passsword is: " + wt.getPass());
       try{Thread.sleep(5000);} catch(Exception e){}
       System.out.println();
       
@@ -64,6 +68,10 @@ public class OpSysDriver
       wt.setUserAmount(2);
       wt.setAntiVirus("Windows Defender");
       wt.setIPAddress("1.127.1.1");
+      wt.setDevices(0);
+      wt.setPerms(8);
+      wt.setDNum(2);
+      wt.setPass("abc123");
       System.out.println("The memory has increased to " + wt.getMemAmount() + " mb.");  
       System.out.println("The bit version of this Operating System is now " + wt.getBitVersion() + ".");
       System.out.println("There are now " + wt.getUserAmount() + " user(s) using your Operating System.");
@@ -71,6 +79,10 @@ public class OpSysDriver
       System.out.println("The ip address you are using this Operating System at has somehow changed to " + wt.getIPAddress() + ".");
       System.out.println(wt.addFiles(4));
       System.out.println("There are now " + wt.fileAmount + " files on your system.");
+      System.out.println("The amount of connected devices is: " + wt.getDevices());
+      System.out.println("The current permission level is: " + wt.getPerms());
+      System.out.println("The desktop that is currently open is desktop #" + wt.getDNum());
+      System.out.println("The current passsword is: " + wt.getPass());
       
       try{Thread.sleep(5000);} catch(Exception e){}
       System.out.println();
@@ -96,8 +108,16 @@ public class OpSysDriver
       System.out.println(wt.virusCheck());
       try{Thread.sleep(5000);} catch(Exception e){}
       System.out.println();
-      System.out.println("Overall, this is what we have to say about Windows Thirteen:");
-      System.out.println(wt.accessPersonalData());
+      System.out.println("New functionality: ");
+      System.out.print("Checking software: ");
+      System.out.println("Checking software: " + wt.checkSoftware());
+      System.out.println("Logging in with password: 123     " + wt.logIn("123"));
+      System.out.println("Logging in with password: abc123     " + wt.logIn("abc123"));
+      System.out.println("Downloading drivers:     " + wt.downloadDrivers());
+      System.out.println("Taking a picture:     " + wt.takePicture());
+      System.out.println("It is currently day " + wt.date + " of using this system.");
+      wt.nextDay();
+      System.out.println("Tomorrow it will be day " + wt.date + " of using this system.");
       }
 
 }
