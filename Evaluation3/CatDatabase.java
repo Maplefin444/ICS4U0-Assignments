@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class CatDatabase{
    private String[] name;
    private String[] breed;
@@ -71,4 +73,75 @@ public class CatDatabase{
          length[ind] = in;
       }
    }
+   
+   public void initialize(){
+      Scanner in = new Scanner(System.in);
+      for(int i = 0; i < amt; i ++){
+         while(true){
+            System.out.print("Enter the name of cat #" + i + ": ");
+            String line = in.nextLine();
+            if(!line.equals("")){
+               name[i] = line;
+               break;
+            }
+            System.out.println("Oops! That's not a valid input!");
+         }
+         while(true){
+            System.out.print("Enter the breed of cat #" + i + ": ");
+            String line = in.nextLine();
+            if(!line.equals("")){
+               breed[i] = line;
+               break;
+            }
+            System.out.println("Oops! That's not a valid input!");
+         }
+         while(true){
+            System.out.print("Enter the age of cat #" + i + ": ");
+            try{
+               int line = Integer.parseInt(in.nextLine());
+               if(line > 0){
+                  age[i] = line;
+                  break;
+               }
+               throw new IllegalArgumentException();
+            }
+            catch (Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         while(true){
+            System.out.print("Enter the weight of cat #" + i + ": ");
+            try{
+               double line = Double.parseDouble(in.nextLine());
+               if(line > 0){
+                  weight[i] = line;
+                  break;
+               }
+               throw new IllegalArgumentException();
+            }
+            catch (Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         while(true){
+            System.out.print("Enter the length of cat #" + i + ": ");
+            try{
+               int line = Integer.parseInt(in.nextLine());
+               if(line > 0){
+                  length[i] = line;
+                  break;
+               }
+               throw new IllegalArgumentException();
+            }
+            catch (Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         if(i != amt-1){
+            System.out.println("Moving onto cat #" + (i+1) + "...");
+         }
+      }
+   }
+   
+   
 }
