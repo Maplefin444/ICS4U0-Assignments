@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class CatDatabase{
    private String[] name;
@@ -74,6 +75,27 @@ public class CatDatabase{
       }
    }
    
+   public double avgAge(){
+      double sum = 0;
+      for(int i = 0; i < amt; i++){
+         sum += (double) age[i];
+      }
+      return sum/amt;
+   }
+   public double avgWeight(){
+      double sum = 0;
+      for(int i = 0; i < amt; i++){
+         sum += (double) weight[i];
+      }
+      return sum/amt;
+   }
+   public double avgLength(){
+      double sum = 0;
+      for(int i = 0; i < amt; i++){
+         sum += (double) length[i];
+      }
+      return sum/amt;
+   }
    public void initialize(){
       Scanner in = new Scanner(System.in);
       for(int i = 0; i < amt; i ++){
@@ -143,5 +165,15 @@ public class CatDatabase{
       }
    }
    
-   
+   public void writeToFile(){
+      try{
+         PrintWriter p = new PrintWriter(new FileWriter("data.txt"));
+         for(int i = 0; i < amt; i ++){
+            p.println(name[i] + " " + breed[i] + " " + age[i] + " " + weight[i] + " " + length[i]);
+         }
+         p.close();
+      }
+      catch(Exception e){
+      }
+   }
 }
