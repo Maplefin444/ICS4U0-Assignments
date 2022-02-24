@@ -1,2 +1,2 @@
-Oscar Ocicat 10 5.0 6
+Oscar Ocicat 10 5.0 0
 Oyster Ocelot 20 13.5 8
