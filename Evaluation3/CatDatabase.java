@@ -7,7 +7,7 @@ public class CatDatabase{
    private int[] age;
    private double[] weight;
    private int[] length;
-   private final int amt;
+   public final int amt;
    
    public CatDatabase(int amt){
       this.amt = amt;
