@@ -6,7 +6,7 @@ public class CatDatabase{
    private String[] breed;
    private int[] age;
    private double[] weight;
-   private int[] length;
+   private int[] niceness;
    public final int amt;
    
    public CatDatabase(int amt){
@@ -15,7 +15,7 @@ public class CatDatabase{
       breed = new String[amt];
       age = new int[amt];
       weight = new double[amt];
-      length = new int[amt];
+      niceness = new int[amt];
    }
    public String getName(int ind){
       if(ind >= amt){
@@ -41,11 +41,11 @@ public class CatDatabase{
       }
       return weight[ind];
    }
-   public int getLength(int ind){
+   public int getNiceness(int ind){
       if(ind >= amt){
          return -1;
       }
-      return length[ind];
+      return niceness[ind];
    }
    
    
@@ -69,9 +69,9 @@ public class CatDatabase{
          weight[ind] = in;
       }
    }
-   public void setLength(int in, int ind){
+   public void setNiceness(int in, int ind){
       if(ind < amt){
-         length[ind] = in;
+         niceness[ind] = in;
       }
    }
    
@@ -89,10 +89,10 @@ public class CatDatabase{
       }
       return sum/amt;
    }
-   public double avgLength(){
+   public double avgNiceness(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
-         sum += (double) length[i];
+         sum += (double) niceness[i];
       }
       return sum/amt;
    }
@@ -146,11 +146,11 @@ public class CatDatabase{
             }
          }
          while(true){
-            System.out.print("Enter the length of cat #" + i + ": ");
+            System.out.print("Enter the niceness of cat #" + i + ": ");
             try{
                int line = Integer.parseInt(in.nextLine());
                if(line > 0){
-                  length[i] = line;
+                  niceness[i] = line;
                   break;
                }
                throw new IllegalArgumentException();
@@ -169,7 +169,7 @@ public class CatDatabase{
       try{
          PrintWriter p = new PrintWriter(new FileWriter("data.txt"));
          for(int i = 0; i < amt; i ++){
-            p.println(name[i] + " " + breed[i] + " " + age[i] + " " + weight[i] + " " + length[i]);
+            p.println(name[i] + " " + breed[i] + " " + age[i] + " " + weight[i] + " " + niceness[i]);
          }
          p.close();
       }
