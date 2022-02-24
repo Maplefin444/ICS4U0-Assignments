@@ -6,6 +6,7 @@ public class CatDatabaseDriver{
       Scanner in = new Scanner(System.in);
       while(true){
          int num = 0;
+         System.out.println();
          System.out.println("The Cat Database");
          System.out.println("Enter the number to go to the specific menu.");
          System.out.println("1. New Database");
@@ -16,7 +17,7 @@ public class CatDatabaseDriver{
          System.out.println("6. Exit");
          try{
             num = Integer.parseInt(in.nextLine());
-            if(num < 1 || num > 5) throw new IllegalArgumentException();
+            if(num < 1 || num > 6) throw new IllegalArgumentException();
             if(num == 1){
                int amt = 0;
                while(true){
