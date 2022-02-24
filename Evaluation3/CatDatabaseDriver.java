@@ -12,7 +12,8 @@ public class CatDatabaseDriver{
          System.out.println("2. Search Current Database");
          System.out.println("3. Read Database From File");
          System.out.println("4. Tools");
-         System.out.println("5. Exit");
+         System.out.println("5. Print all cats");
+         System.out.println("6. Exit");
          try{
             num = Integer.parseInt(in.nextLine());
             if(num < 1 || num > 5) throw new IllegalArgumentException();
@@ -158,8 +159,17 @@ public class CatDatabaseDriver{
                   System.out.println("Create a database first!");
                }
             }
-         
             if(num == 5){
+               if(a != null){
+                  for(int i = 0; i < a.amt; i++){
+                     System.out.println("Name: " + a.getName(i) + " Breed: " + a.getBreed(i) + " Age: " + a.getAge(i) + " Weight: " + a.getWeight(i) + " Length: " + a.getLength(i));
+                  }
+               }
+               else{
+                  System.out.println("Create a database first!");
+               }
+            }
+            if(num == 6){
                System.out.println("Thank you for using the Cat Database.");
                break;
             }
