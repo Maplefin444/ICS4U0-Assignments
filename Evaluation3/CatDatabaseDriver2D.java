@@ -1,6 +1,20 @@
+/*
+    Programmers: Pradyumn Jha, James Huynh
+    Teacher: Ms. Krasteva
+    Date: February 25th, 2022 (2022-02-25)
+    Assignment: Evaluation 3
+    Purpose: Runs the CatDatabase2D class.
+*/
+
+// Import statements
 import java.util.*;
 import java.io.*;
+
+
+// The "CatDatabaseDriver2D" class.
 public class CatDatabaseDriver2D{
+
+   // The main method responsible for executing other methods
    public static void main(String[] args){
       CatDatabase2D a = null;
       Scanner in = new Scanner(System.in);
@@ -197,4 +211,4 @@ public class CatDatabaseDriver2D{
          }
       }
    }
-}
+} // CatDatabaseDriver2D class
