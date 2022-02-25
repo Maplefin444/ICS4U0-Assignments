@@ -111,15 +111,22 @@ public class CatDatabaseDriver{
                for(int i = 0; i < length; i ++){
                   try{
                      String[] inp = input.readLine().split(" ");
+                     if(inp[0].equals("") || inp[1].equals("") || inp[0] == null || inp[1] == null){
+                        System.out.println("There was error reading line #" + i + " from the file.");
+                        continue;
+                     }
                      a.setName(inp[0], i);
                      a.setBreed(inp[1], i);
+                     Integer.parseInt(inp[2]);
+                     Double.parseDouble(inp[3]);
+                     Integer.parseInt(inp[4]);
                      a.setAge(Integer.parseInt(inp[2]), i);
                      a.setWeight(Double.parseDouble(inp[3]), i);
                      a.setNiceness(Integer.parseInt(inp[4]), i);
                   }
                   catch(Exception e){
-                     System.out.println("Issue while loading, please check your save file.");
-                     break;
+                     System.out.println("There was error reading line #" + i + " from the file.");
+                     continue;
                   }
                }
                input.close();
