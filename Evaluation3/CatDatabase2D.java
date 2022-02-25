@@ -10,19 +10,19 @@ public class CatDatabase2D{
       data = new String[5][amt];
    }
    public String getName(int ind){
-      if(ind >= amt){
+      if(ind >= amt || ind < 0){
          return "No such index!";
       }
       return data[0][ind];
    }
    public String getBreed(int ind){
-      if(ind >= amt){
+      if(ind >= amt || ind < 0){
          return "No such index!";
       }
       return data[1][ind];
    }
    public int getAge(int ind){
-      if(ind >= amt){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       try{
@@ -32,7 +32,7 @@ public class CatDatabase2D{
       return -1;
    }
    public double getWeight(int ind){
-      if(ind >= amt){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       try{
@@ -42,7 +42,7 @@ public class CatDatabase2D{
       return -1;
    }
    public int getNiceness(int ind){
-      if(ind >= amt){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       try{
@@ -54,27 +54,27 @@ public class CatDatabase2D{
    
    
    public void setName(String in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          data[0][ind] = in;
       }
    }
    public void setBreed(String in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          data[1][ind] = in;
       }
    }
    public void setAge(int in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          data[2][ind] = Integer.toString(in);
       }
    }
    public void setWeight(double in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          data[3][ind] = Double.toString(in);
       }
    }
    public void setNiceness(int in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          data[4][ind] = Integer.toString(in);
       }
    }
@@ -83,6 +83,8 @@ public class CatDatabase2D{
       double sum = 0;
       try{
          for(int i = 0; i < amt; i++){
+            if(Double.parseDouble(data[2][i]) <= 0) 
+               continue;
             sum += Double.parseDouble(data[2][i]);
          }
       }
@@ -93,6 +95,8 @@ public class CatDatabase2D{
       double sum = 0;
       try{
          for(int i = 0; i < amt; i++){
+            if(Double.parseDouble(data[3][i]) <= 0) 
+               continue;
             sum += Double.parseDouble(data[3][i]);
          }
       }
@@ -103,6 +107,8 @@ public class CatDatabase2D{
       double sum = 0;
       try{
          for(int i = 0; i < amt; i++){
+            if(Double.parseDouble(data[4][i]) <= 0) 
+               continue;
             sum += Double.parseDouble(data[4][i]);
          }
       }
