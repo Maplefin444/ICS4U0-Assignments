@@ -33,7 +33,7 @@ public class CatDatabase{
    
    // This getName() method gets the name of cat from specified index after checking for validity
    public String getName(int ind){
-      if(ind >= amt){
+      if(ind >= amt && ind >= 0){
          return "No such index!";
       }
       return name[ind];
@@ -41,7 +41,7 @@ public class CatDatabase{
    
    // This getBreed() method gets the breed of cat from specified index after checking for validity   
    public String getBreed(int ind){
-      if(ind >= amt){
+      if(ind >= amt && ind >= 0){
          return "No such index!";
       }
       return breed[ind];
@@ -49,7 +49,7 @@ public class CatDatabase{
    
    // This getAge() method gets the age of cat from specified index after checking for validity   
    public int getAge(int ind){
-      if(ind >= amt){
+      if(ind >= amt && ind >= 0){
          return -1;
       }
       return age[ind];
@@ -57,7 +57,7 @@ public class CatDatabase{
    
    // This getWeight() method gets the weight of cat from specified index after checking for validity
    public double getWeight(int ind){
-      if(ind >= amt){
+      if(ind >= amt && ind >= 0){
          return -1;
       }
       return weight[ind];
@@ -65,7 +65,7 @@ public class CatDatabase{
    
    // This getNiceness() method gets the niceness 'level' of cat from specified index after checking for validity
    public int getNiceness(int ind){
-      if(ind >= amt){
+      if(ind >= amt && ind >= 0){
          return -1;
       }
       return niceness[ind];
@@ -73,35 +73,35 @@ public class CatDatabase{
    
    // This setName() method sets the name of cat via user specified input after checking for validity
    public void setName(String in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          name[ind] = in;
       }
    }
    
    // This setBreed() method sets the breed of cat via user specified input after checking for validity
    public void setBreed(String in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          breed[ind] = in;
       }
    }
    
    // This setAge() method sets the age of cat via user specified input after checking for validity
    public void setAge(int in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          age[ind] = in;
       }
    }
    
    // This setWeight() method sets the weight of cat via user specified input after checking for validity
    public void setWeight(Double in, int ind){
-      if(ind < amt){
+      if(ind < amt && ind >= 0){
          weight[ind] = in;
       }
    }
    
    // This setNiceness() method sets the niceness 'level' of cat via user specified input after checking for validity
    public void setNiceness(int in, int ind){
-      if(ind < amt && in >= 1 && in <= 10){
+      if(ind < amt && (in >= 1 && in <= 10) && ind >= 0){
          niceness[ind] = in;
       }
    }
@@ -110,6 +110,7 @@ public class CatDatabase{
    public double avgAge(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
+         if(age[i] <= 0) continue;
          sum += (double) age[i];
       }
       return sum/amt;
@@ -119,6 +120,7 @@ public class CatDatabase{
    public double avgWeight(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
+         if(weight[i] <= 0) continue;
          sum += (double) weight[i];
       }
       return sum/amt;
@@ -128,6 +130,7 @@ public class CatDatabase{
    public double avgNiceness(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
+         if(niceness[i] <= 0) continue;
          sum += (double) niceness[i];
       }
       return sum/amt;
