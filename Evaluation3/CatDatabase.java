@@ -12,6 +12,8 @@ import java.io.*;
 
 // The "CatDatabase" class.
 public class CatDatabase{
+
+   // Variables for attributes
    private String[] name;
    private String[] breed;
    private int[] age;
@@ -19,6 +21,7 @@ public class CatDatabase{
    private int[] niceness;
    public final int amt;
    
+   // Constructor
    public CatDatabase(int amt){
       this.amt = amt;
       name = new String[amt];
@@ -27,30 +30,40 @@ public class CatDatabase{
       weight = new double[amt];
       niceness = new int[amt];
    }
+   
+   // This getName() method gets the name of cat from specified index after checking for validity
    public String getName(int ind){
       if(ind >= amt){
          return "No such index!";
       }
       return name[ind];
    }
+   
+   // This getBreed() method gets the breed of cat from specified index after checking for validity   
    public String getBreed(int ind){
       if(ind >= amt){
          return "No such index!";
       }
       return breed[ind];
    }
+   
+   // This getAge() method gets the age of cat from specified index after checking for validity   
    public int getAge(int ind){
       if(ind >= amt){
          return -1;
       }
       return age[ind];
    }
+   
+   // This getWeight() method gets the weight of cat from specified index after checking for validity
    public double getWeight(int ind){
       if(ind >= amt){
          return -1;
       }
       return weight[ind];
    }
+   
+   // This getNiceness() method gets the niceness 'level' of cat from specified index after checking for validity
    public int getNiceness(int ind){
       if(ind >= amt){
          return -1;
@@ -58,33 +71,42 @@ public class CatDatabase{
       return niceness[ind];
    }
    
-   
+   // This setName() method sets the name of cat via user specified input after checking for validity
    public void setName(String in, int ind){
       if(ind < amt){
          name[ind] = in;
       }
    }
+   
+   // This setBreed() method sets the breed of cat via user specified input after checking for validity
    public void setBreed(String in, int ind){
       if(ind < amt){
          breed[ind] = in;
       }
    }
+   
+   // This setAge() method sets the age of cat via user specified input after checking for validity
    public void setAge(int in, int ind){
       if(ind < amt){
          age[ind] = in;
       }
    }
+   
+   // This setWeight() method sets the weight of cat via user specified input after checking for validity
    public void setWeight(Double in, int ind){
       if(ind < amt){
          weight[ind] = in;
       }
    }
+   
+   // This setNiceness() method sets the niceness 'level' of cat via user specified input after checking for validity
    public void setNiceness(int in, int ind){
       if(ind < amt && in >= 1 && in <= 10){
          niceness[ind] = in;
       }
    }
    
+   // This avgAge() method calculates the average age of all cats in database
    public double avgAge(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
@@ -92,6 +114,8 @@ public class CatDatabase{
       }
       return sum/amt;
    }
+   
+   // This avgWeight() method calculates the average weight of all cats in database
    public double avgWeight(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
@@ -99,6 +123,8 @@ public class CatDatabase{
       }
       return sum/amt;
    }
+   
+   // This avgNiceness() method calculates the average niceness 'level' of all cats in database
    public double avgNiceness(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
@@ -106,6 +132,8 @@ public class CatDatabase{
       }
       return sum/amt;
    }
+   
+   // This initialize() method takes user input and inputs it into database
    public void initialize(){
       Scanner in = new Scanner(System.in);
       for(int i = 0; i < amt; i ++){
@@ -175,6 +203,7 @@ public class CatDatabase{
       }
    }
    
+   // This writeToFile() method saves database onto file
    public void writeToFile(){
       try{
          PrintWriter p = new PrintWriter(new FileWriter("data.txt"));
