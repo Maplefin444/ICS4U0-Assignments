@@ -33,7 +33,7 @@ public class CatDatabase{
    
    // This getName() method gets the name of cat from specified index after checking for validity
    public String getName(int ind){
-      if(ind >= amt && ind >= 0){
+      if(ind >= amt || ind < 0){
          return "No such index!";
       }
       return name[ind];
@@ -41,7 +41,7 @@ public class CatDatabase{
    
    // This getBreed() method gets the breed of cat from specified index after checking for validity   
    public String getBreed(int ind){
-      if(ind >= amt && ind >= 0){
+      if(ind >= amt || ind < 0){
          return "No such index!";
       }
       return breed[ind];
@@ -49,7 +49,7 @@ public class CatDatabase{
    
    // This getAge() method gets the age of cat from specified index after checking for validity   
    public int getAge(int ind){
-      if(ind >= amt && ind >= 0){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       return age[ind];
@@ -57,7 +57,7 @@ public class CatDatabase{
    
    // This getWeight() method gets the weight of cat from specified index after checking for validity
    public double getWeight(int ind){
-      if(ind >= amt && ind >= 0){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       return weight[ind];
@@ -65,7 +65,7 @@ public class CatDatabase{
    
    // This getNiceness() method gets the niceness 'level' of cat from specified index after checking for validity
    public int getNiceness(int ind){
-      if(ind >= amt && ind >= 0){
+      if(ind >= amt || ind < 0){
          return -1;
       }
       return niceness[ind];
