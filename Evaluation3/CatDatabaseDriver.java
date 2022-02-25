@@ -1,6 +1,19 @@
+/*
+    Programmers: Pradyumn Jha, James Huynh
+    Teacher: Ms. Krasteva
+    Date: February 25th, 2022 (2022-02-25)
+    Assignment: Evaluation 3
+    Purpose: Runs the CatDatabase class.
+*/
+
+// Import statements
 import java.util.*;
 import java.io.*;
+
+// The "CatDatabaseDriver" class.
 public class CatDatabaseDriver{
+
+   // The main method responsible for executing other methods
    public static void main(String[] args){
       CatDatabase a = null;
       Scanner in = new Scanner(System.in);
@@ -18,7 +31,7 @@ public class CatDatabaseDriver{
          System.out.println("7. Exit");
          try{
             num = Integer.parseInt(in.nextLine());
-            if(num < 1 || num > 6) throw new IllegalArgumentException();
+            if(num < 1 || num > 7) throw new IllegalArgumentException();
             if(num == 1){
                int amt = 0;
                while(true){
@@ -197,4 +210,4 @@ public class CatDatabaseDriver{
          }
       }
    }
-}
+} // CatDatabaseDriver class

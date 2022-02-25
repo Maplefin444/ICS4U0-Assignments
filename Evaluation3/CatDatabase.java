@@ -1,6 +1,16 @@
+/*
+    Programmers: James Huynh, Pradyumn Jha
+    Teacher: Ms. Krasteva
+    Date: February 25th, 2022 (2022-02-25)
+    Assignment: Evaluation 3
+    Purpose: Store cat details in a database (parallel arrays).
+*/
+
+// Import statements
 import java.util.*;
 import java.io.*;
 
+// The "CatDatabase" class.
 public class CatDatabase{
    private String[] name;
    private String[] breed;
@@ -72,6 +82,7 @@ public class CatDatabase{
    public void setNiceness(int in, int ind){
       if(ind < amt && in >= 1 && in <= 10){
          niceness[ind] = in;
+      }
    }
    
    public double avgAge(){
@@ -175,4 +186,4 @@ public class CatDatabase{
       catch(Exception e){
       }
    }
-}
+} // CatDatabase class
