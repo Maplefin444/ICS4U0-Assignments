@@ -70,9 +70,8 @@ public class CatDatabase{
       }
    }
    public void setNiceness(int in, int ind){
-      if(ind < amt){
+      if(ind < amt && in >= 1 && in <= 10){
          niceness[ind] = in;
-      }
    }
    
    public double avgAge(){
@@ -149,7 +148,7 @@ public class CatDatabase{
             System.out.print("Enter the niceness of cat #" + i + ": ");
             try{
                int line = Integer.parseInt(in.nextLine());
-               if(line > 0){
+               if(line >= 1 && line <= 10){
                   niceness[i] = line;
                   break;
                }
