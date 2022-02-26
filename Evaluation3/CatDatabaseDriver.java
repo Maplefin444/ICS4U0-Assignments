@@ -125,7 +125,7 @@ public class CatDatabaseDriver{
                   try{
                      String[] inp = input.readLine().split(" ");
                      if(inp[0].equals("") || inp[1].equals("") || inp[0] == null || inp[1] == null){
-                        System.out.println("There was error reading line #" + i + " from the file.");
+                        System.out.println("There was error reading line #" + (i+1) + " from the file.");
                         continue;
                      }
                      a.setName(inp[0], i);
@@ -138,7 +138,7 @@ public class CatDatabaseDriver{
                      a.setNiceness(Integer.parseInt(inp[4]), i);
                   }
                   catch(Exception e){
-                     System.out.println("There was error reading line #" + i + " from the file.");
+                     System.out.println("There was error reading line #" + (i+1) + " from the file.");
                      break;
                   }
                }
