@@ -68,7 +68,7 @@ public class CatDatabaseDriver{
                            for(int i = 0; i < a.amt; i++){
                               if(a.getName(i).equalsIgnoreCase(cat)){
                                  found = true;
-                                 System.out.println("Name: " + a.getName(i) + " Breed: " + a.getBreed(i) + " Age: " + a.getAge(i) + " Weight: " + a.getWeight(i) + " Niceness: " + a.getNiceness(i));
+                                 System.out.println("Name:" + a.getName(i) + " Breed:" + a.getBreed(i) + " Age:" + a.getAge(i) + " Weight:" + a.getWeight(i) + " Niceness:" + a.getNiceness(i));
                               }
                            }
                            if(!found){
@@ -83,7 +83,7 @@ public class CatDatabaseDriver{
                            for(int i = 0; i < a.amt; i++){
                               if(a.getBreed(i).equalsIgnoreCase(cat)){
                                  found = true;
-                                 System.out.println("Name: " + a.getName(i) + " Breed: " + a.getBreed(i) + " Age: " + a.getAge(i) + " Weight: " + a.getWeight(i) + " Niceness: " + a.getNiceness(i));
+                                 System.out.println("Name:" + a.getName(i) + " Breed:" + a.getBreed(i) + " Age:" + a.getAge(i) + " Weight:" + a.getWeight(i) + " Niceness:" + a.getNiceness(i));
                               }
                            }
                            if(!found){
@@ -131,7 +131,9 @@ public class CatDatabaseDriver{
                      a.setBreed(inp[1], i);
                      Integer.parseInt(inp[2]);
                      Double.parseDouble(inp[3]);
-                     Integer.parseInt(inp[4]);
+                     if(Integer.parseInt(inp[4]) > 10 || Integer.parseInt(inp[4]) < 1){
+                        throw new IllegalArgumentException(Integer.parseInt(inp[4]));
+                     }
                      a.setAge(Integer.parseInt(inp[2]), i);
                      a.setWeight(Double.parseDouble(inp[3]), i);
                      a.setNiceness(Integer.parseInt(inp[4]), i);
@@ -198,7 +200,7 @@ public class CatDatabaseDriver{
             if(num == 5){
                if(a != null){
                   for(int i = 0; i < a.amt; i++){
-                     System.out.println("Name: " + a.getName(i) + " Breed: " + a.getBreed(i) + " Age: " + a.getAge(i) + " Weight: " + a.getWeight(i) + " Niceness: " + a.getNiceness(i));
+                     System.out.println("Name:" + a.getName(i) + " Breed:" + a.getBreed(i) + " Age:" + a.getAge(i) + " Weight:" + a.getWeight(i) + " Niceness:" + a.getNiceness(i));
                   }
                }
                else{
