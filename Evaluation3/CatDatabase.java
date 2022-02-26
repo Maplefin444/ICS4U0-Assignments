@@ -31,6 +31,7 @@ public class CatDatabase{
       niceness = new int[amt];
    }
    
+   // This greatestAge() method identifies the cat in database with the greatest age
    public int greatestAge(){
       int gage = -1;
       int ind = -1;
@@ -43,6 +44,7 @@ public class CatDatabase{
       return ind;
    }
    
+   // This greatestWeight() method identifies the cat in database with the greatest weight
    public int greatestWeight(){
       double gwg = -1;
       int ind = -1;
@@ -54,6 +56,8 @@ public class CatDatabase{
       }
       return ind;
    }
+   
+   // This greatestNiceness() method identifies the cat in database with the greatest niceness 'level'
    public int greatestNiceness(){
       int gnice = -1;
       int ind = -1;
