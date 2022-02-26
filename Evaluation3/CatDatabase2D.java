@@ -9,6 +9,42 @@ public class CatDatabase2D{
       this.amt = amt;
       data = new String[5][amt];
    }
+   
+   public int greatestAge(){
+      int gage = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(Integer.parseInt(data[2][i]) > gage){
+            ind = i;
+            gage = Integer.parseInt(data[2][i]);
+         }
+      }
+      return ind;
+   }
+   
+   public int greatestWeight(){
+      double gwg = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(Double.parseDouble(data[3][i]) > gwg){
+            ind = i;
+            gwg = Double.parseDouble(data[3][i]);
+         }
+      }
+      return ind;
+   }
+   public int greatestNiceness(){
+      int gnice = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(Integer.parseInt(data[4][i]) > gnice){
+            ind = i;
+            gnice = Integer.parseInt(data[4][i]);
+         }
+      }
+      return ind;
+   }
+   
    public String getName(int ind){
       if(ind >= amt || ind < 0){
          return "No such index!";

@@ -155,10 +155,13 @@ public class CatDatabaseDriver2D{
                      System.out.println("1. Get Average Age");
                      System.out.println("2. Get Average Weight");
                      System.out.println("3. Get Average Niceness");
-                     System.out.println("4. Back");
+                     System.out.println("4. Get Oldest Cat");
+                     System.out.println("5. Get Heaviest Cat");
+                     System.out.println("6. Get Nicest Cat");
+                     System.out.println("7. Back");
                      try{
                         tchoice = Integer.parseInt(in.nextLine());
-                        if(tchoice < 1 || tchoice > 4) throw new IllegalArgumentException();
+                        if(tchoice < 1 || tchoice > 7) throw new IllegalArgumentException();
                         if(tchoice == 1){
                            System.out.println("The average age of the cats is: " + a.avgAge());
                         }
@@ -169,6 +172,18 @@ public class CatDatabaseDriver2D{
                            System.out.println("The average niceness of the cats is: " + a.avgNiceness());
                         }
                         if(tchoice == 4){
+                           int ind = a.greatestAge();
+                           System.out.println("The oldest cat is " + a.getName(ind) + " with the age of " + a.getAge(ind));
+                        }
+                        if(tchoice == 5){
+                           int ind = a.greatestWeight();
+                           System.out.println("The heaviest cat is " + a.getName(ind) + " with the weight of " + a.getWeight(ind));
+                        }
+                        if(tchoice == 6){
+                           int ind = a.greatestNiceness();
+                           System.out.println("The nicest cat is " + a.getName(ind) + " with the nice value of " + a.getNiceness(ind));
+                        }
+                        if(tchoice == 7){
                            break;
                         }
                      }

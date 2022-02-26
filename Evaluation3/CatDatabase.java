@@ -31,6 +31,41 @@ public class CatDatabase{
       niceness = new int[amt];
    }
    
+   public int greatestAge(){
+      int gage = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(age[i] > gage){
+            ind = i;
+            gage = age[i];
+         }
+      }
+      return ind;
+   }
+   
+   public int greatestWeight(){
+      double gwg = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(weight[i] > gwg){
+            ind = i;
+            gwg = weight[i];
+         }
+      }
+      return ind;
+   }
+   public int greatestNiceness(){
+      int gnice = -1;
+      int ind = -1;
+      for(int i = 0 ; i < amt; i++){
+         if(niceness[i] > gnice){
+            ind = i;
+            gnice = niceness[i];
+         }
+      }
+      return ind;
+   }
+   
    // This getName() method gets the name of cat from specified index after checking for validity
    public String getName(int ind){
       if(ind >= amt || ind < 0){
@@ -110,7 +145,8 @@ public class CatDatabase{
    public double avgAge(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
-         if(age[i] <= 0) continue;
+         if(age[i] <= 0) 
+            continue;
          sum += (double) age[i];
       }
       return sum/amt;
@@ -120,7 +156,8 @@ public class CatDatabase{
    public double avgWeight(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
-         if(weight[i] <= 0) continue;
+         if(weight[i] <= 0) 
+            continue;
          sum += (double) weight[i];
       }
       return sum/amt;
@@ -130,7 +167,8 @@ public class CatDatabase{
    public double avgNiceness(){
       double sum = 0;
       for(int i = 0; i < amt; i++){
-         if(niceness[i] <= 0) continue;
+         if(niceness[i] <= 0) 
+            continue;
          sum += (double) niceness[i];
       }
       return sum/amt;
