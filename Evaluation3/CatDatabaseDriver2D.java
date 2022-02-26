@@ -126,8 +126,7 @@ public class CatDatabaseDriver2D{
                   try{
                      String[] inp = input.readLine().split(" ");
                      if(inp[0].equals("") || inp[1].equals("") || inp[0] == null || inp[1] == null){
-                        System.out.println("There was error reading line #" + (i+1) + " from the file.");
-                        continue;
+                        throw new IllegalArgumentException();
                      }
                      a.setName(inp[0], i);
                      a.setBreed(inp[1], i);
