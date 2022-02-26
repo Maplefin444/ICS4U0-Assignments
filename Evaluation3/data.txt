@@ -1,3 +1,10 @@
-Oscar Ocicat 10 5.0 0
+Oscar Ocicat 10 5.0 1
 Oyster Ocelot 20 13.5 8
 Mark Calico 1 3.22 10
+Luna Burmese 3 24.23 4
+Milo Toyger 6 11.1 8
+Oliver Sphynx 2 9.3 7
+Bella Siamese 3 3.3 3
+Charlie Savannah 8 6.6 2
+Willow Munchkin 11 8.3 9
+Snowball Persian 15 9.7 7

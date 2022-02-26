@@ -132,7 +132,7 @@ public class CatDatabaseDriver{
                      Integer.parseInt(inp[2]);
                      Double.parseDouble(inp[3]);
                      if(Integer.parseInt(inp[4]) > 10 || Integer.parseInt(inp[4]) < 1){
-                        throw new IllegalArgumentException(Integer.parseInt(inp[4]));
+                        throw new IllegalArgumentException();
                      }
                      a.setAge(Integer.parseInt(inp[2]), i);
                      a.setWeight(Double.parseDouble(inp[3]), i);
