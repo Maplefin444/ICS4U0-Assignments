@@ -139,7 +139,7 @@ public class CatDatabaseDriver{
                   }
                   catch(Exception e){
                      System.out.println("There was error reading line #" + i + " from the file.");
-                     continue;
+                     break;
                   }
                }
                input.close();
