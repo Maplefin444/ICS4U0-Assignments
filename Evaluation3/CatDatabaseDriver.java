@@ -164,13 +164,13 @@ public class CatDatabaseDriver{
                         tchoice = Integer.parseInt(in.nextLine());
                         if(tchoice < 1 || tchoice > 7) throw new IllegalArgumentException();
                         if(tchoice == 1){
-                           System.out.println("The average age of the cats is: " + a.avgAge());
+                           System.out.printf("The average age of the cats is: %.2f%n", a.avgAge());
                         }
                         if(tchoice == 2){
-                           System.out.println("The average weight of the cats is: " + a.avgWeight());
+                           System.out.printf("The average weight of the cats is: %.2f%n", a.avgWeight());
                         }
                         if(tchoice == 3){
-                           System.out.println("The average niceness of the cats is: " + a.avgNiceness());
+                           System.out.printf("The average niceness of the cats is: %.2f%n", a.avgNiceness());
                         }
                         if(tchoice == 4){
                            int ind = a.greatestAge();
