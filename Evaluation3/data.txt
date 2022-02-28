@@ -8,3 +8,4 @@ Bella Siamese 3 3.3 3
 Charlie Savannah 8 6.6 2
 Willow Munchkin 11 8.3 9
 Snowball Persian 15 9.7 7
+Sophie Ragdoll 3 15.5 3
