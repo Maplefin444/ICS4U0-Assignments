@@ -116,36 +116,39 @@ public class CatDatabase2D{
    
    // This setName() method sets the name of cat via user specified input after checking for validity
    public void setName(String in, int ind){
-      if(ind < amt && ind >= 0){
+      if(ind < amt && ind >= 0 && !in.equals("")){
          data[0][ind] = in;
       }
    }
    
    // This setBreed() method sets the breed of cat via user specified input after checking for validity
    public void setBreed(String in, int ind){
-      if(ind < amt && ind >= 0){
+      if(ind < amt && ind >= 0 && !in.equals("")){
          data[1][ind] = in;
       }
    }
    
    // This setAge() method sets the age of cat via user specified input after checking for validity
    public void setAge(int in, int ind){
-      if(ind < amt && ind >= 0){
+      if(ind < amt && ind >= 0 && in > 0){
          data[2][ind] = Integer.toString(in);
       }
    }
    
    // This setWeight() method sets the weight of cat via user specified input after checking for validity
    public void setWeight(double in, int ind){
-      if(ind < amt && ind >= 0){
+      if(ind < amt && ind >= 0 && in > 0){
          data[3][ind] = Double.toString(in);
       }
    }
    
    // This setNiceness() method sets the niceness 'level' of cat via user specified input after checking for validity
    public void setNiceness(int in, int ind){
-      if(ind < amt && ind >= 0){
+      if(ind < amt && in >= 1 && in <= 10 && ind >= 0){
          data[4][ind] = Integer.toString(in);
+      }
+      else{
+         System.out.println("ooof");
       }
    }
    
@@ -245,7 +248,7 @@ public class CatDatabase2D{
             System.out.print("Enter the niceness of cat #" + i + ": ");
             try{
                int line = Integer.parseInt(in.nextLine());
-               if(line > 0){
+               if(line > 0 && line < 11){
                   data[4][i] = Integer.toString(line);
                   break;
                }
