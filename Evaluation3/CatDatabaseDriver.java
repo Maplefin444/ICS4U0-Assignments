@@ -109,6 +109,7 @@ public class CatDatabaseDriver{
             if(num == 3){
                BufferedReader input = new BufferedReader(new FileReader("data.txt"));
                int length = 0;
+               boolean bad = false;
                while(true){
                   try{
                      String line = input.readLine();
@@ -121,30 +122,42 @@ public class CatDatabaseDriver{
                }
                input.close();
                input = new BufferedReader(new FileReader("data.txt"));
-               a = new CatDatabase(length);
                for(int i = 0; i < length; i ++){
                   try{
                      String[] inp = input.readLine().split(" ");
                      if(inp[0].equals("") || inp[1].equals("") || inp[0] == null || inp[1] == null){
                         throw new IllegalArgumentException();
                      }
-                     a.setName(inp[0], i);
-                     a.setBreed(inp[1], i);
-                     Integer.parseInt(inp[2]);
-                     Double.parseDouble(inp[3]);
+                     if(Integer.parseInt(inp[2]) <= 0){
+                        throw new IllegalArgumentException();
+                     }
+                     if(Double.parseDouble(inp[3]) <= 0){
+                        throw new IllegalArgumentException();
+                     }
                      if(Integer.parseInt(inp[4]) > 10 || Integer.parseInt(inp[4]) < 1){
                         throw new IllegalArgumentException();
                      }
-                     a.setAge(Integer.parseInt(inp[2]), i);
-                     a.setWeight(Double.parseDouble(inp[3]), i);
-                     a.setNiceness(Integer.parseInt(inp[4]), i);
                   }
                   catch(Exception e){
                      System.out.println("There was error reading line #" + (i+1) + " from the file.");
+                     bad = true;
                      break;
                   }
                }
                input.close();
+               if(!bad){
+                  a = new CatDatabase(length);
+                  input = new BufferedReader(new FileReader("data.txt"));
+                  for(int i = 0; i < length; i ++){
+                     String[] inp = input.readLine().split(" ");
+                     a.setName(inp[0], i);
+                     a.setBreed(inp[1], i);
+                     a.setAge(Integer.parseInt(inp[2]), i);
+                     a.setWeight(Double.parseDouble(inp[3]), i);
+                     a.setNiceness(Integer.parseInt(inp[4]), i);
+                  }
+                  input.close();
+               }
                System.out.println("Finished reading.");
             }
          
