@@ -1,4 +1,0 @@
-1. change length to niceness [DONE]
-2. add errortrapping for niceness [DONE]
-3. skip over lines in file if var is invalid [DONE]
-4. get highest values
