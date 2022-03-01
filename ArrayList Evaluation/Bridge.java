@@ -17,7 +17,6 @@ public class Bridge{
    public void dealCards(){
       Collections.shuffle(deck);
       for(int i = 0; i < hands.length; i ++){
-         System.out.print("Player " + (i+1) + " has a hand of: ");
          String hand = "";
          for(int j = 0; j < 13; j++){
             hand += deck.get(deck.size() - 1) + " ";
@@ -25,8 +24,6 @@ public class Bridge{
          }
          hand.trim();
          hands[i] = hand;
-         System.out.print(hand);
-         System.out.println();
       }
    }
    public void pointsEval(){
@@ -48,6 +45,7 @@ public class Bridge{
          }
       }
       for(int i = 0; i < hands.length; i ++){
+         System.out.println("Player " + (i+1) + "'s hand: ");
          int s = 0;
          int h = 0;
          int d = 0;
@@ -55,6 +53,7 @@ public class Bridge{
          String[] currhand = hands[i].split(" ");
          for(int j = 0; j < 13; j++){
             if(currhand[j].charAt(1) == 'S'){
+               System.out.print(currhand[j] + " ");
                s++;
             }
             else if(currhand[j].charAt(1) == 'H'){
@@ -67,6 +66,7 @@ public class Bridge{
                c++;
             }
          }
+         System.out.println();
       
          if(s == 0){
             scores[i] += 3;
@@ -106,8 +106,28 @@ public class Bridge{
          if(c == 2){
             scores[i] += 1;
          }
+         for(int j = 0; j < 13; j++){
+            if(currhand[j].charAt(1) == 'H'){
+               System.out.print(currhand[j] + " ");
+            }
+         }
+         System.out.println();
+         for(int j = 0; j < 13; j++){
+            if(currhand[j].charAt(1) == 'D'){
+               System.out.print(currhand[j] + " ");
+            }
+         }
+         System.out.println();
+         for(int j = 0; j < 13; j++){
+            if(currhand[j].charAt(1) == 'C'){
+               System.out.print(currhand[j] + " ");
+            }
+         }
+         System.out.println();
+         System.out.println();
       }
-      
+         
+   
    }
    public void printPoints(){
       System.out.println();
