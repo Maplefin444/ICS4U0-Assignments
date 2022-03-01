@@ -4,7 +4,7 @@ public class Bridge{
    ArrayList<String> deck = new ArrayList<String>();
    String[] suits = {"S", "H", "D", "C"};
    String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
-   String[][] hands = new String[4][13];
+   String[] hands = new String[4];
    int[] scores = new int[4];
    
    public void addCards(){
@@ -18,27 +18,31 @@ public class Bridge{
       Collections.shuffle(deck);
       for(int i = 0; i < hands.length; i ++){
          System.out.print("Player " + (i+1) + " has a hand of: ");
-         for(int j = 0; j < hands[0].length; j++){
-            hands[i][j] = deck.get(deck.size() - 1);
+         String hand = "";
+         for(int j = 0; j < 13; j++){
+            hand += deck.get(deck.size() - 1) + " ";
             deck.remove(deck.size() - 1);
-            System.out.print(hands[i][j] + " ");
          }
+         hand.trim();
+         hands[i] = hand;
+         System.out.print(hand);
          System.out.println();
       }
    }
    public void pointsEval(){
       for(int i = 0; i < hands.length; i ++){
-         for(int j = 0; j < hands[0].length; j++){
-            if(hands[i][j].charAt(0) == 'A'){
+         String[] currhand = hands[i].split(" ");
+         for(int j = 0; j < 13; j++){
+            if(currhand[j].charAt(0) == 'A'){
                scores[i] += 4;
             }
-            else if(hands[i][j].charAt(0) == 'K'){
+            else if(currhand[j].charAt(0) == 'K'){
                scores[i] += 3;
             }
-            else if(hands[i][j].charAt(0) == 'Q'){
+            else if(currhand[j].charAt(0) == 'Q'){
                scores[i] += 2;
             }
-            else if(hands[i][j].charAt(0) == 'J'){
+            else if(currhand[j].charAt(0) == 'J'){
                scores[i] += 1;
             }
          }
@@ -48,20 +52,22 @@ public class Bridge{
          int h = 0;
          int d = 0;
          int c = 0;
-         for(int j = 0; j < hands[0].length; j++){
-            if(hands[i][j].charAt(1) == 'S'){
+         String[] currhand = hands[i].split(" ");
+         for(int j = 0; j < 13; j++){
+            if(currhand[j].charAt(1) == 'S'){
                s++;
             }
-            else if(hands[i][j].charAt(1) == 'H'){
+            else if(currhand[j].charAt(1) == 'H'){
                h++;
             }
-            else if(hands[i][j].charAt(1) == 'D'){
+            else if(currhand[j].charAt(1) == 'D'){
                d++;
             }
-            else if(hands[i][j].charAt(1) == 'C'){
+            else if(currhand[j].charAt(1) == 'C'){
                c++;
             }
          }
+      
          if(s == 0){
             scores[i] += 3;
          }
@@ -101,6 +107,7 @@ public class Bridge{
             scores[i] += 1;
          }
       }
+      
    }
    public void printPoints(){
       System.out.println();
