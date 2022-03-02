@@ -1,3 +1,10 @@
+/*
+James Huynh, Pradyumn Jha
+Ms. Krasteva ArrayList Evaluation ICS4U0
+Mar 7 2022
+This program simulates the game Bridge, by randomizing the deck and calculating points.
+*/
+
 import java.util.*;
 
 public class Bridge{
@@ -7,6 +14,7 @@ public class Bridge{
    String[] hands = new String[4];
    int[] scores = new int[4];
    
+   //This public method initializes the deck by combining all possible values with their suits
    public void addCards(){
       for(String val : values){
          for(String suit : suits){
@@ -14,6 +22,7 @@ public class Bridge{
          }
       }
    }
+   //This public method will shuffle the cards, and for every player will give them 13 cards
    public void dealCards(){
       Collections.shuffle(deck);
       for(int i = 0; i < hands.length; i ++){
@@ -26,6 +35,7 @@ public class Bridge{
          hands[i] = hand;
       }
    }
+   //This public method sets the corresponding player's score, based on multiple criteria
    public void pointsEval(){
       for(int i = 0; i < hands.length; i ++){
          String[] currhand = hands[i].split(" ");
@@ -43,14 +53,11 @@ public class Bridge{
                scores[i] += 1;
             }
          }
-      }
-      for(int i = 0; i < hands.length; i ++){
          System.out.println("Player " + (i+1) + "'s hand: ");
          int s = 0;
          int h = 0;
          int d = 0;
          int c = 0;
-         String[] currhand = hands[i].split(" ");
          for(int j = 0; j < 13; j++){
             if(currhand[j].charAt(1) == 'S'){
                System.out.print(currhand[j] + " ");
@@ -105,6 +112,7 @@ public class Bridge{
          
    
    }
+   //This public method prints the point values
    public void printPoints(){
       System.out.println();
       int user = 1;
@@ -113,7 +121,7 @@ public class Bridge{
          user++;
       }
    }
-   
+   //This public method will get who is the winner, and if there is a tie, will print all the players who had that score
    public void getWinner(){
       System.out.println();
       int max = 0;
@@ -128,6 +136,7 @@ public class Bridge{
          }
       }
    }
+   //The main method, runs the whole program
    public static void main(String[] args){
       Bridge a = new Bridge();
       a.addCards();
