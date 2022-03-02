@@ -67,45 +67,6 @@ public class Bridge{
             }
          }
          System.out.println();
-      
-         if(s == 0){
-            scores[i] += 3;
-         }
-         if(h == 0){
-            scores[i] += 3;
-         }
-         if(d == 0){
-            scores[i] += 3;
-         }
-         if(c == 0){
-            scores[i] += 3;
-         }
-         
-         if(s == 1){
-            scores[i] += 2;
-         }
-         if(h == 1){
-            scores[i] += 2;
-         }
-         if(d == 1){
-            scores[i] += 2;
-         }
-         if(c == 1){
-            scores[i] += 2;
-         }
-         
-         if(s == 2){
-            scores[i] += 1;
-         }
-         if(h == 2){
-            scores[i] += 1;
-         }
-         if(d == 2){
-            scores[i] += 1;
-         }
-         if(c == 2){
-            scores[i] += 1;
-         }
          for(int j = 0; j < 13; j++){
             if(currhand[j].charAt(1) == 'H'){
                System.out.print(currhand[j] + " ");
@@ -123,6 +84,21 @@ public class Bridge{
                System.out.print(currhand[j] + " ");
             }
          }
+      
+         if(s == 0) scores[i] += 3;
+         if(h == 0) scores[i] += 3;
+         if(d == 0) scores[i] += 3;
+         if(c == 0) scores[i] += 3;
+         
+         if(s == 1) scores[i] += 2;
+         if(h == 1) scores[i] += 2;
+         if(d == 1) scores[i] += 2;
+         if(c == 1) scores[i] += 2;
+         
+         if(s == 2) scores[i] += 1;
+         if(h == 2) scores[i] += 1;
+         if(d == 2) scores[i] += 1;
+         if(c == 2) scores[i] += 1;
          System.out.println();
          System.out.println();
       }
