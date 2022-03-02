@@ -46,9 +46,8 @@ public class MacsBookDriver{
                         a = new MacsBook();
                         a.initialize();
                      }
-                     else if(num == 3){
+                     else if(num == 3)
                         break;
-                     }
                   }
                   catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                }
@@ -60,6 +59,51 @@ public class MacsBookDriver{
                else{
                   for(int i = 0; i < a.getLength();i++){
                      System.out.println("Name:" + a.getName(i) + "   Student Number:" + a.getStudentNum(i) + "   Assignment Mark:" + a.getAssignment(i) + "   Test Mark:" + a.getTest(i) + "   Final Project Mark:" + a.getFinal(i));
+                  }
+               }
+            }
+            else if(num == 3){
+               if(a == null){
+                  System.out.println("Create a MacsBook first!");
+               }
+               else{
+                  while(true){
+                     try{
+                        System.out.println("1. Search by name");
+                        System.out.println("2. Search by student number");
+                        System.out.println("3. Back");
+                        choice = inp.nextLine();
+                        num = Integer.parseInt(choice);
+                        if(num < 1 || num > 3) throw new IllegalArgumentException();
+                        
+                        if(num == 1){
+                           System.out.print("Enter the name you want to search for: ");
+                           String name = inp.nextLine();
+                           for(int i = 0; i < a.getLength();i++){
+                              if(a.getName(i).equals(name)) System.out.println("Name:" + a.getName(i) + "   Student Number:" + a.getStudentNum(i) + "   Assignment Mark:" + a.getAssignment(i) + "   Test Mark:" + a.getTest(i) + "   Final Project Mark:" + a.getFinal(i));
+                           }
+                        }
+                        
+                        if(num == 2){
+                           while(true){
+                              try{
+                                 System.out.print("Enter the student number you want to search for: ");
+                                 String line = inp.nextLine();
+                                 int stnum = Integer.parseInt(line);
+                                 for(int i = 0; i < a.getLength();i++){
+                                    if(a.getStudentNum(i) == stnum) System.out.println("Name:" + a.getName(i) + "   Student Number:" + a.getStudentNum(i) + "   Assignment Mark:" + a.getAssignment(i) + "   Test Mark:" + a.getTest(i) + "   Final Project Mark:" + a.getFinal(i));
+                                 }
+                                 break;
+                              }
+                              catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                           }
+                        } 
+                        
+                        if(num == 3) 
+                           break;
+                        
+                     }
+                     catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                   }
                }
             }
