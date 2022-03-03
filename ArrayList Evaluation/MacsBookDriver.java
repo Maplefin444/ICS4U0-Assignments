@@ -21,13 +21,15 @@ public class MacsBookDriver{
          System.out.println("3. View specific student's data");
          System.out.println("4. Change specific aspects");
          System.out.println("5. Save to file");
-         System.out.println("6. Exit");
+         System.out.println("6. Calculate class average");
+         System.out.println("7. Calculate student average");
+         System.out.println("8. Exit");
          try{
             Scanner inp = new Scanner(System.in);
             String choice = inp.nextLine();
             System.out.println();
             int num = Integer.parseInt(choice);
-            if(num < 1 || num > 6) throw new IllegalArgumentException();
+            if(num < 1 || num > 8) throw new IllegalArgumentException();
             
             if(num == 1){
                while(true){
@@ -263,7 +265,17 @@ public class MacsBookDriver{
                   System.out.println("Saved!");
                }
             }
-            else if(num == 6) 
+            else if(num == 6){
+               if(a == null) System.out.println("Create a MacsBook first!");
+               else{
+                  System.out.printf("The assignment average is: %.2f\n", a.avgAssignment());
+                  
+                  System.out.printf("The test average is: %.2f\n", a.avgTest());
+                  System.out.printf("The final project average is: %.2f\n", a.avgFinal());
+                  System.out.printf("The class average is: %.2f\n", a.classAvg());
+               }
+            }
+            else if(num == 8) 
                break;
          }
          catch(Exception e){System.out.println("Oops! That's not a valid input!");}

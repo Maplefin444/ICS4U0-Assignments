@@ -245,6 +245,23 @@ public class MacsBook{
       }
    }
    /**
+   * This public method averages the class's marks.
+   * @return Returns the average mark.
+   */
+   public double classAvg(){
+      double sum = 0;
+      for(int i : assignment){
+         sum += (double) i;
+      }
+      for(int i : test){
+         sum += (double) i;
+      }
+      for(int i : finalproj){
+         sum += (double) i;
+      }
+      return (sum/(double)(assignment.size() + test.size() + finalproj.size()));
+   }
+   /**
    * This public method averages the assignment marks.
    * @return Returns the average mark.
    */
@@ -272,7 +289,7 @@ public class MacsBook{
    * This public method averages the final project marks.
    * @return Returns the average mark.
    */
-   public double avgProj(){
+   public double avgFinal(){
       double sum = 0;
       for(int i : finalproj){
          sum += (double) i;
