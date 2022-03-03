@@ -15,24 +15,87 @@ public class MacsBook{
    /**
    * This private arraylist stores the names of the students in the system.
    */
-   private ArrayList<String> names = new ArrayList<String>();
+   private ArrayList<String> names = new ArrayList<String>(0);
    /**
    * This private arraylist stores the student numbers of the students in the system.
    */
-   private ArrayList<Integer> stunum = new ArrayList<Integer>();
+   private ArrayList<Integer> stunum = new ArrayList<Integer>(0);
    /**
    * This private arraylist stores the assignment marks of the students in the system.
    */
-   private ArrayList<Integer> assignment = new ArrayList<Integer>();
+   private ArrayList<Integer> assignment = new ArrayList<Integer>(0);
    /**
    * This private arraylist stores the test marks of the students in the system.
    */
-   private ArrayList<Integer> test = new ArrayList<Integer>();
+   private ArrayList<Integer> test = new ArrayList<Integer>(0);
    /**
    * This private arraylist stores the final project marks of the students in the system.
    */
-   private ArrayList<Integer> finalproj = new ArrayList<Integer>();
+   private ArrayList<Integer> finalproj = new ArrayList<Integer>(0);
    
+   /**
+   * This method gets the length of the arraylists.
+   * @return The length of the arraylists.
+   */
+   public int getLength(){
+      return names.size();
+   }
+   
+   /**
+   * This method adds the value given to the end of the arraylist
+   * @param val The value to be added.
+   */
+   public void addName(String val){
+      try{
+         names.add(val);
+      }
+      catch(Exception e){
+      }
+   }
+   /**
+   * This method adds the value given to the end of the arraylist
+   * @param val The value to be added.
+   */
+   public void addStudentNum(int val){
+      try{
+         stunum.add(val);
+      }
+      catch(Exception e){
+      }
+   }
+   /**
+   * This method adds the value given to the end of the arraylist
+   * @param val The value to be added.
+   */
+   public void addAssignment(int val){
+      try{
+         assignment.add(val);
+      }
+      catch(Exception e){
+      }
+   }
+   /**
+   * This method adds the value given to the end of the arraylist
+   * @param val The value to be added.
+   */
+   public void addTest(int val){
+      try{
+         test.add(val);
+      }
+      catch(Exception e){
+      }
+   }
+   /**
+   * This method adds the value given to the end of the arraylist
+   * @param val The value to be added.
+   */
+   public void addFinal(int val){
+      try{
+         finalproj.add(val);
+      }
+      catch(Exception e){
+      }
+   }
    /**
    * This method gets the corresponding variable, or catches an exception that is caught by printing the stack trace.
    * The stack trace method was retrieved from https://www.educative.io/edpresso/what-is-the-printstacktrace-method-in-java
@@ -234,6 +297,94 @@ public class MacsBook{
       catch(Exception e){
          e.printStackTrace();
          return -1;
+      }
+   }
+   
+   /**
+   * This public method handles the creation of a new MacsBook object, asking the user to input values.
+   */
+   public void initialize(){
+      Scanner inp = new Scanner(System.in);
+      int num = 0;
+      while(true){
+         System.out.print("How many students would you like to enter? ");
+         String amt = inp.nextLine();
+         try{
+            num = Integer.parseInt(amt);
+            break;
+         }
+         catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+      }
+      
+      for(int i = 0; i < num; i ++){
+         System.out.println();
+         System.out.println("Student #" + (i+1));
+         while(true){
+            System.out.print("Student's name: ");
+            String name = inp.nextLine();
+            if(name.equals("")) System.out.println("Oops! That's not a valid input!");
+            else{
+               names.add(name);
+               break;
+            }
+            
+         }
+         while(true){
+            System.out.print("Student's student number: ");
+            String name = inp.nextLine();
+            try{
+               int temp = Integer.parseInt(name);
+               if(temp < 0) throw new IllegalArgumentException();
+               stunum.add(temp);
+               break;
+            }
+            catch(Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         
+         while(true){
+            System.out.print("Student's assignment mark: ");
+            String name = inp.nextLine();
+            try{
+               int temp = Integer.parseInt(name);
+               if(temp > 200 || temp < 0) throw new IllegalArgumentException();
+               assignment.add(temp);
+               break;
+            }
+            catch(Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         
+         while(true){
+            System.out.print("Student's test mark: ");
+            String name = inp.nextLine();
+            try{
+               int temp = Integer.parseInt(name);
+               if(temp > 200 || temp < 0) throw new IllegalArgumentException();
+               test.add(temp);
+               break;
+            }
+            catch(Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         
+         while(true){
+            System.out.print("Student's final project mark: ");
+            String name = inp.nextLine();
+            try{
+               int temp = Integer.parseInt(name);
+               if(temp > 200 || temp < 0) throw new IllegalArgumentException();
+               finalproj.add(temp);
+               break;
+            }
+            catch(Exception e){
+               System.out.println("Oops! That's not a valid input!");
+            }
+         }
+         System.out.println("Student #" + (i+1) + " is now done initializing, moving on...");
       }
    }
 }

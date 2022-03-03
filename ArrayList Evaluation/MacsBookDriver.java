@@ -19,7 +19,7 @@ public class MacsBookDriver{
          System.out.println("1. Create new MacsBook");
          System.out.println("2. View all saved data");
          System.out.println("3. View specific student's data");
-         System.out.println("4. Change specific marks");
+         System.out.println("4. Change specific aspects");
          System.out.println("5. Save to file");
          System.out.println("6. Exit");
          try{
@@ -40,7 +40,56 @@ public class MacsBookDriver{
                      if(num < 1 || num > 3) throw new IllegalArgumentException();
                      
                      if(num == 1){
-                        BufferedReader file = new BufferedReader(new FileReader("data.txt"));
+                        BufferedReader re = new BufferedReader(new FileReader("data.txt"));
+                        boolean bad = false;
+                        int length = 0;
+                        while(true){
+                           try{
+                              String line = re.readLine();
+                              if(line == null) 
+                                 break;
+                              String[] data = line.split(" ");
+                              if(data[0].equals("")){
+                                 bad = true;
+                                 break;
+                              }
+                              if(Integer.parseInt(data[1]) < 0){
+                                 bad = true;
+                                 break;
+                              }
+                              if(Integer.parseInt(data[2]) < 0 || Integer.parseInt(data[2]) > 200){
+                                 bad = true;
+                                 break;
+                              }
+                              if(Integer.parseInt(data[3]) < 0 || Integer.parseInt(data[3]) > 200){
+                                 bad = true;
+                                 break;
+                              }
+                              if(Integer.parseInt(data[4]) < 0 || Integer.parseInt(data[4]) > 200){
+                                 bad = true;
+                                 break;
+                              }
+                              length++;
+                           }
+                           catch(Exception e){
+                              bad = true;
+                              break;
+                           }
+                        }
+                        if(bad) System.out.println("Error reading from the file.");
+                        else{
+                           re = new BufferedReader(new FileReader("data.txt"));
+                           a = new MacsBook();
+                           for(int i = 0 ; i < length; i++){
+                              String[] data = re.readLine().split(" ");
+                              a.addName(data[0]);
+                              a.addStudentNum(Integer.parseInt(data[1]));
+                              a.addAssignment(Integer.parseInt(data[2]));
+                              a.addTest(Integer.parseInt(data[3]));
+                              a.addFinal(Integer.parseInt(data[4]));
+                           }
+                           System.out.println("Finished reading!");
+                        }
                      }
                      else if(num == 2){
                         a = new MacsBook();
@@ -105,6 +154,113 @@ public class MacsBookDriver{
                      }
                      catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                   }
+               }
+            }
+            else if(num == 4){
+               if(a == null) System.out.println("Create a MacsBook first!");
+               else{
+                  while(true){
+                     System.out.println("1. Edit name");
+                     System.out.println("2. Edit student number");
+                     System.out.println("3. Edit assignment mark");
+                     System.out.println("4. Edit test mark");
+                     System.out.println("5. Edit final project mark");
+                     System.out.println("6. Back");
+                     int nu = 0;
+                     try{
+                        nu = Integer.parseInt(inp.nextLine());
+                        if(nu < 1 || nu > 6) throw new IllegalArgumentException();
+                     }
+                     catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                     if(nu == 6) 
+                        break;
+                     int pl = 0;
+                     while(true){
+                        try{
+                           System.out.println("There are currently " + a.getLength() + " student(s) in the system.");
+                           System.out.print("Enter which student you want to edit: ");
+                           pl = Integer.parseInt(inp.nextLine());
+                           if(pl < 1 || pl > a.getLength()) throw new IllegalArgumentException();
+                           break;
+                        }
+                        catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                     
+                     }
+                     while(true){
+                        if(nu == 1) System.out.print("Enter the new name: ");
+                        if(nu == 2) System.out.print("Enter the new student number: ");
+                        if(nu == 3) System.out.print("Enter the new assignment mark: ");
+                        if(nu == 4) System.out.print("Enter the new test mark: ");
+                        if(nu == 5) System.out.print("Enter the new final project mark: ");
+                        
+                        
+                        if(nu == 1){
+                           try{
+                              String line = inp.nextLine();
+                              if(line.equals("")) throw new IllegalArgumentException();
+                              a.setName(pl-1, line);
+                              break;
+                           }
+                           catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                        }
+                        else if(nu == 2){
+                           try{
+                              int line = Integer.parseInt(inp.nextLine());
+                              if(line < 0) throw new IllegalArgumentException();
+                              a.setStudentNum(pl-1, line);
+                              break;
+                           }
+                           catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                        }
+                        
+                        else if(nu == 3){
+                           try{
+                              int line = Integer.parseInt(inp.nextLine());
+                              if(line < 0 || line > 200) throw new IllegalArgumentException();
+                              a.setAssignment(pl-1, line);
+                              break;
+                           }
+                           catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                        }
+                        
+                        else if(nu == 4){
+                           try{
+                              int line = Integer.parseInt(inp.nextLine());
+                              if(line < 0 || line > 200) throw new IllegalArgumentException();
+                              a.setTest(pl-1, line);
+                              break;
+                           }
+                           catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                        }
+                        
+                        else if(nu == 5){
+                           try{
+                              int line = Integer.parseInt(inp.nextLine());
+                              if(line < 0 || line > 200) throw new IllegalArgumentException();
+                              a.setFinal(pl-1, line);
+                              break;
+                           }
+                           catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                        }
+                     }
+                     break;
+                  }
+                  
+               }
+               
+               
+            }
+            else if(num == 5){ 
+               if(a == null){
+                  System.out.println("Create a MacsBook first!");
+               }
+               else{
+                  PrintWriter wr = new PrintWriter(new FileWriter("data.txt"));
+                  for(int i = 0; i < a.getLength();i++){
+                     wr.println(a.getName(i) + " " + a.getStudentNum(i) + " " + a.getAssignment(i) + " " + a.getTest(i) + " " + a.getFinal(i));
+                  }
+                  wr.close();
+                  System.out.println("Saved!");
                }
             }
             else if(num == 6) 
