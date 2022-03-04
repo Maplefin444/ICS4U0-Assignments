@@ -12,6 +12,10 @@ import java.io.*;
 * This class is the driver to the MacsBook class.
 */
 public class MacsBookDriver{
+   /**
+   * The main method where everything is run.
+   * @param args The runtime arguments
+   */
    public static void main(String[] args){
       MacsBook a = null;
       while(true){
@@ -23,13 +27,14 @@ public class MacsBookDriver{
          System.out.println("5. Save to file");
          System.out.println("6. Calculate class average");
          System.out.println("7. Calculate student average");
-         System.out.println("8. Exit");
+         System.out.println("8. Add new student(s)");
+         System.out.println("9. Exit");
          try{
             Scanner inp = new Scanner(System.in);
             String choice = inp.nextLine();
             System.out.println();
             int num = Integer.parseInt(choice);
-            if(num < 1 || num > 8) throw new IllegalArgumentException();
+            if(num < 1 || num > 9) throw new IllegalArgumentException();
             
             if(num == 1){
                while(true){
@@ -91,6 +96,8 @@ public class MacsBookDriver{
                               a.addFinal(Integer.parseInt(data[4]));
                            }
                            System.out.println("Finished reading!");
+                           try{Thread.sleep(2000);}
+                           catch(Exception e){}
                         }
                      }
                      else if(num == 2){
@@ -102,6 +109,8 @@ public class MacsBookDriver{
                   }
                   catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
             else if(num == 2){
                if(a == null){
@@ -112,6 +121,8 @@ public class MacsBookDriver{
                      System.out.println("Name:" + a.getName(i) + "   Student Number:" + a.getStudentNum(i) + "   Assignment Mark:" + a.getAssignment(i) + "   Test Mark:" + a.getTest(i) + "   Final Project Mark:" + a.getFinal(i));
                   }
                }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
             else if(num == 3){
                if(a == null){
@@ -157,6 +168,8 @@ public class MacsBookDriver{
                      catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                   }
                }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
             else if(num == 4){
                if(a == null) System.out.println("Create a MacsBook first!");
@@ -250,7 +263,8 @@ public class MacsBookDriver{
                   
                }
                
-               
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
             else if(num == 5){ 
                if(a == null){
@@ -274,6 +288,8 @@ public class MacsBookDriver{
                   System.out.printf("The final project average is: %.2f\n", a.avgFinal());
                   System.out.printf("The class average is: %.2f\n", a.classAvg());
                }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
             else if(num == 7){
                if(a == null){
@@ -292,8 +308,20 @@ public class MacsBookDriver{
                      catch(Exception e){System.out.println("Oops! That's not a valid input!");}
                   }
                }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
             }
-            else if(num == 8) 
+            else if(num == 8){
+               if(a == null){
+                  System.out.println("Create a MacsBook first!");
+               }
+               else{
+                  a.initialize();
+               }
+               try{Thread.sleep(2000);}
+               catch(Exception e){}
+            }
+            else if(num == 9) 
                break;
          }
          catch(Exception e){System.out.println("Oops! That's not a valid input!");}
