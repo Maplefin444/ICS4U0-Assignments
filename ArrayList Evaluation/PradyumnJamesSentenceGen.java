@@ -17,7 +17,7 @@ public class PradyumnJamesSentenceGen
    {
       
       ArrayList<String> articles = new ArrayList<String>(); // Array List for articles
-      articles.add("A");
+      articles.add("a");
       articles.add("an");
       articles.add("the");
       
@@ -103,13 +103,16 @@ public class PradyumnJamesSentenceGen
       // For-loop to print five randomly generated sentences
       for(int i = 0; i < 5; i++)
       {
-         System.out.print(articles.get((int)(Math.random() * 3)) + " ");
+         String bword = articles.get((int)(Math.random() * 3));
+         bword = bword.substring(0,1).toUpperCase() + bword.substring(1);
+         System.out.print(bword + " ");
          System.out.print(adjectives.get((int)(Math.random() * 3)) + " ");
          System.out.print(nouns.get((int)(Math.random() * 7)) + " ");
+         System.out.print(adverbs.get((int)(Math.random() * 5)) + " ");
          System.out.print(verbs.get((int)(Math.random() * 5)) + " ");
          System.out.print(prepositions.get((int)(Math.random() * 49)) + " ");
          System.out.print(articles.get((int)(Math.random() * 3)) + " ");
-         System.out.print(adverbs.get((int)(Math.random() * 5)) + " ");
+         System.out.print(adjectives.get((int)(Math.random() * 3)) + " ");
          System.out.println(nouns.get((int)(Math.random() * 7)) + ".");
       }
    }
