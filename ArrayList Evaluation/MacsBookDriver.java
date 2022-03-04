@@ -275,6 +275,24 @@ public class MacsBookDriver{
                   System.out.printf("The class average is: %.2f\n", a.classAvg());
                }
             }
+            else if(num == 7){
+               if(a == null){
+                  System.out.println("Create a MacsBook first!");
+               }
+               else{
+                  while(true){
+                     try{
+                        System.out.println("There are currently " + a.getLength() + " student(s) in the system.");
+                        System.out.print("Enter which student average you want to view: ");
+                        int pl = Integer.parseInt(inp.nextLine());
+                        if(pl < 1 || pl > a.getLength()) throw new IllegalArgumentException();
+                        System.out.println("The student's current average is: " + a.avgMark(pl));
+                        break;
+                     }
+                     catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+                  }
+               }
+            }
             else if(num == 8) 
                break;
          }
