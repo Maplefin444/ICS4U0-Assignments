@@ -14,7 +14,7 @@ import java.io.*;
 public class MacsBookDriver{
    /**
    * The main method where everything is run.
-   * @param args The runtime arguments
+   * @param args The command line arguments
    */
    public static void main(String[] args){
       MacsBook a = null;
@@ -324,7 +324,10 @@ public class MacsBookDriver{
             else if(num == 9) 
                break;
          }
-         catch(Exception e){System.out.println("Oops! That's not a valid input!");}
+         catch(Exception e){
+            System.out.println("Oops! That's not a valid input!");
+            try{Thread.sleep(2000);}
+            catch(Exception b){}}
       }
       System.out.println("Thank you for using the MacsBook system.");
    }

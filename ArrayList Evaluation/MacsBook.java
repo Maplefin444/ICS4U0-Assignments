@@ -318,7 +318,7 @@ public class MacsBook{
    }
    
    /**
-   * This public method handles the creation of a new MacsBook object, asking the user to input values.
+   * This public method handles the creation of a new MacsBook object, or the adding of a new student, asking the user to input values.
    */
    public void initialize(){
       Scanner inp = new Scanner(System.in);
