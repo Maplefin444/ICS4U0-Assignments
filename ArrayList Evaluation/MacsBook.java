@@ -351,7 +351,7 @@ public class MacsBook{
             String name = inp.nextLine();
             try{
                int temp = Integer.parseInt(name);
-               if(temp < 0) throw new IllegalArgumentException();
+               if(Integer.toString(temp).length() != 9) throw new IllegalArgumentException();
                stunum.add(temp);
                break;
             }

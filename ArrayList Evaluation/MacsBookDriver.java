@@ -55,7 +55,7 @@ public class MacsBookDriver{
                                  bad = true;
                                  break;
                               }
-                              if(Integer.parseInt(data[1]) < 0){
+                              if(data[1].length() != 9){
                                  bad = true;
                                  break;
                               }
@@ -208,7 +208,7 @@ public class MacsBookDriver{
                         else if(nu == 2){
                            try{
                               int line = Integer.parseInt(inp.nextLine());
-                              if(line < 0) throw new IllegalArgumentException();
+                              if(Integer.toString(line).length() != 9) throw new IllegalArgumentException();
                               a.setStudentNum(pl-1, line);
                               break;
                            }
