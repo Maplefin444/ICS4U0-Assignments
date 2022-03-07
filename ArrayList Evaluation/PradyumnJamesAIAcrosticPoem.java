@@ -12,7 +12,7 @@ import java.util.*;
 public class PradyumnJamesAIAcrosticPoem
 {
    
-   
+   //The Random class used to generate random values was retrieved from https://docs.oracle.com/javase/8/docs/api/java/util/Random.html
    public void poemGenerator()
    {
       ArrayList<String> letterA = new ArrayList<String>();
