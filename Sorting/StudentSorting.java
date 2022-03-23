@@ -38,7 +38,7 @@ public class StudentSorting{
    }
    public void sortByMark(){
       for(int i = 1; i < names.length; i++){
-         for(int j = i; j > 0 && marks[j-1] > marks[j]; --j){
+         for(int j = i; j > 0 && marks[j-1] < marks[j]; --j){
             swap(j-1, j);
          }
       }
