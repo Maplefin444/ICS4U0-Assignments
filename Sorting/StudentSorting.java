@@ -17,6 +17,14 @@ public class StudentSorting{
          e.printStackTrace();
       }
    }
+   private void swap(int i, int j){
+      int tempMark = marks[j];
+      String tempName = names[j];
+      marks[j] = marks[i];
+      names[j] = names[i];
+      marks[i] = tempMark;
+      names[i] = tempName;
+   }
    public void sortNames(){
       for(int i = 0; i < names.length-1;i++){
          int mindex = i;
@@ -25,14 +33,14 @@ public class StudentSorting{
                mindex = j;
             }
          }
-         int temp = marks[mindex];
-         String temp2 = names[mindex];
-            
-         marks[mindex] = marks[i];
-         names[mindex] = names[i];
-            
-         marks[i] = temp;
-         names[i] = temp2;
+         swap(i, mindex);
+      }
+   }
+   public void sortByMark(){
+      for(int i = 1; i < names.length; i++){
+         for(int j = i; j > 0 && marks[j-1] > marks[j]; --j){
+            swap(j-1, j);
+         }
       }
    }
    
