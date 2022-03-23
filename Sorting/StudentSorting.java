@@ -34,23 +34,6 @@ public class StudentSorting{
          marks[i] = temp;
          names[i] = temp2;
       }
-      
-      String[] array = {"z", "a", "b"};
-      for ( int j=0; j < array.length-1; j++ )
-      {
-      
-         int min = j;
-         for ( int k=j+1; k < array.length; k++ )
-            if ( array[k].compareTo( array[min] ) < 0 ) min = k;  
-      
-      // Swap the reference at j with the reference at min 
-         String temp = array[j];
-         array[j] = array[min];
-         array[min] = temp;
-      }
-      for(int i = 0; i < array.length;i++){
-         System.out.println(array[i]);
-      }
    }
    
    public void printStudents(){
