@@ -19,6 +19,7 @@ public class StudentSortingDriver{
       a.printStudents();
       
       // print out students sorted by mark (descending)
+      System.out.println();
       System.out.println("---------- SORTED BY MARK --------------------");
       a.sortByMark();
       a.printStudents();
