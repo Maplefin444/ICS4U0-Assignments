@@ -1,6 +1,8 @@
 
 // imports
 import java.util.*;
+import java.text.NumberFormat;
+import java.io.*;
 
 /**
 * CountrySorter provides various methods for processing a list of countries, including sorting by the country name, sorting by country population, and writing countries to a file.
@@ -76,6 +78,34 @@ public class CountrySorter{
          capital.set(l + i, capTmp.get(i));
          area.set(l + i, areaTmp.get(i));
          population.set(l + i, popTmp.get(i));
+      }
+   }
+   
+   /**
+   * This method prints the countries stored in this object to a file. Each country will be stored as "[countryName]\t\t\t[population]"
+   * @param fileName the name of the file to write the countries to
+   * @return true if the write was successful, and false otherwise.
+   */
+   public boolean printToFile(String fileName){
+      // tool to format an integer, using commas to split every group of 3 digits
+      NumberFormat formatter = NumberFormat.getIntegerInstance();
+      try{
+         // declare a printwriter
+         PrintWriter pw = new PrintWriter(new FileWriter(fileName));
+         
+         // print out each country
+         for(int i = 0; i < countryName.size(); i++){
+            pw.println(countryName.get(i) + "\t\t\t" + formatter.format(population.get(i)));
+         }
+         
+         // close the printwriter
+         pw.close();
+         
+         // return true as write was successful
+         return true;
+      } catch (IOException e){
+         // return false as something went wrong
+         return false;
       }
    }
    
