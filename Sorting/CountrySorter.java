@@ -1,3 +1,10 @@
+/*
+* Programmers: Pradyumn Jha, Jamues Huynh, Daniel Ye
+* Teacher: Ms. Krasteva
+* Date: March 25, 2022
+* Description: Run by CountrySorterDriver.java, this class reads in countries from a file, sorts them, and prints them out again.
+*/
+
 // imports
 import java.util.*;
 import java.text.*;
