@@ -1,0 +1,195 @@
+Afghanistan Kabul 250,000 31,056,997 
+Albania Tiranë 11,100 3,581,655 
+Algeria Algiers 919,590 32,930,091 
+Andorra Andorra la Vella 181 71,201 
+Angola Luanda 481,351 12,127,071 
+Antigua and Barbuda St. John's 171 69,108 
+Argentina Buenos Aires 1,068,296 39,921,833
+Armenia Yerevan 11,506 2,976,372 
+Australia Canberra 2,967,893 20,264,082 
+Austria Vienna 32,382 8,192,880 
+Azerbaijan Baku 33,436 7,961,619 
+Bahamas Nassau 5,382 303,770 
+Bahrain Al-Manámah 257 698,585 
+Bangladesh Dhaka 55,598 147,365,352 
+Barbados Bridgetown 166 279,912 
+Belarus Mensk (Minsk) 80,154 10,293,011 
+Belgium Brussels 11,787 10,379,067 
+Belize Belmopan 8,867 287,730 
+Benin Porto-Novo 43,483 7,862,944 
+Bhutan Thimphu 18,147 2,279,723 
+Bolivia La Paz 424,162 8,989,046 
+Bosnia and Herzegovina Sarajevo 19,741 4,498,976 
+Botswana Gaborone 231,803 1,639,833 
+Brazil Brasília 3,286,470 188,078,227 
+Brunei Bandar Seri Begawan 2,228 379,444 
+Bulgaria Sofia 42,822 7,385,367 
+Burkina Faso Ouagadougou 105,869 13,902,972 
+Burundi Bujumbura 10,745 8,090,068 
+Cambodia Phnom Penh 69,900 13,881,427 
+Cameroon Yaoundé 183,567 17,340,702 
+Canada Ottawa 3,855,081 33,098,932 
+Cape Verde Praia 1,557 420,979 
+Central African Republic Bangui 240,534 4,303,356 
+Chad  N'Djamena 495,752 9,944,201 
+Chile Santiago 292,258 16,134,219 
+China Beijing 3,705,386 1,313,973,713 
+Colombia Bogatá 439,733 43,593,035 
+Comoros  Moroni 838 690,948 
+Congo, Republic of Brazzaville 132,046 3,702,314 
+Congo, Democratic Republic of the Kinshasa 905,563 62,660,551 
+Costa Rica San José 19,730 4,075,261 
+Côte d'Ivoire Yamoussoukro 124,502 17,654,843 
+Croatia Zagreb 21,831 4,494,749 
+Cuba Havana 42,803 11,382,820 
+Cyprus Nicosia 3,571 784,301 
+Czech Republic Prague 30,450 10,235,455 
+Denmark Copenhagen 16,639 5,450,661 
+Djibouti Djibouti 8,880 486,530 
+Dominica Roseau 291 68,910 
+Dominican Republic Santo Domingo 18,815 9,183,984 
+East Timor Dili 5,794 1,062,777 
+Ecuador Quito 109,483 13,547,510 
+Egypt Cairo 386,660 78,887,007 
+El Salvador San Salvador 8,124 6,822,378 
+Equatorial Guinea Malabo 10,830 540,109 
+Eritrea Asmara 46,842 4,786,994 
+Estonia Tallinn 17,462 1,324,333 
+Ethiopia Addis Ababa 435,184 74,777,981 
+Fiji Suva 7,054 905,949 
+Finland Helsinki 130,558 5,231,372 
+France Paris 211,208 60,876,136 
+Gabon Libreville 103,346 1,424,906 
+Gambia Banjul 4,363 1,641,564 
+Georgia Tbilisi 26,911 4,661,473 
+Germany Berlin 137,846 82,422,299 
+Ghana Accra 92,456 22,409,572 
+Greece Athens 50,942 10,688,058 
+Grenada St. George's 133 89,703 
+Guatemala Guatemala City 42,042 12,293,545 
+Guinea Conakry 94,925 9,690,222 
+Guinea-Bissau Bissau 13,946 1,442,029 
+Guyana Georgetown 83,000 767,245 
+Haiti Port-au-Prince 10,714 8,308,504 
+Honduras Tegucigalpa 43,278 7,326,496 
+Hungary Budapest 35,919 9,981,334 
+Iceland Reykjavik 39,768 299,388 
+India New Delhi 1,269,338 1,095,351,995 
+Indonesia Jakarta 741,096 245,452,739 
+Iran Tehran 636,293 68,688,433 
+Iraq Baghdad 168,753 26,783,383 
+Ireland Dublin 27,135 4,062,235 
+Israel Jerusalem 8,019 6,352,117 
+Italy Rome 116,305 58,133,509 
+Jamaica Kingston 4,244 2,758,124 
+Japan Tokyo 145,882 127,463,611 
+Jordan Amman 35,637 5,906,760 
+Kazakhstan Astana 1,049,150 15,233,244 
+Kenya Nairobi 224,961 34,707,817 
+Kiribati Tarawa 313 105,432 
+Korea, North Pyongyang 46,540 23,113,019 
+Korea, South Seoul 38,023 48,846,823 
+Kuwait Kuwait City 6,880 2,418,393 
+Kyrgyzstan Bishkek 76,641 5,213,898 
+Laos Vientiane 91,428 6,368,481 
+Latvia Riga 24,938 2,274,735 
+Lebanon Beirut 4,015 3,874,050 
+Lesotho Maseru 11,720 2,022,331 
+Liberia Monrovia 43,000 3,042,004 
+Libya Tripoli 679,358 5,900,754 
+Liechtenstein Vaduz 62 33,987 
+Lithuania Vilnius 25,174 3,585,906 
+Luxembourg Luxembourg 998 474,413 
+Macedonia Skopje 9,781 2,050,554 
+Madagascar Antananarivo 226,656 18,595,469 
+Malawi Lilongwe 45,745 13,013,926 
+Malaysia Kuala Lumpur 127,316 24,385,858 
+Maldives Malé 116 359,008 
+Mali Bamako 478,764 11,716,829 
+Malta Valletta 122 400,214 
+Marshall Islands Majuro 4,577 60,422 
+Mauritania Nouakchott 397,953 3,177,388 
+Mauritius Port Louis 788 1,240,827 
+Mexico Mexico City 761,602 107,449,525 
+Micronesia Palikir 271 108,004 
+Moldova Chisinau 13,067 4,466,706 
+Monaco Monaco 1 32,543 
+Mongolia Ulan Bator 603,905 2,832,224 
+Montenegro Cetinje 5,415 630,548 
+Morocco Rabat 172,413 33,241,259 
+Mozambique Maputo 309,494 19,686,505 
+Myanmar (Burma) Rangoon 261,969 47,382,633 
+Namibia Windhoek 318,694 2,044,147 
+Nauru Yaren 8 13,287 
+Nepal Kathmandu 54,363 28,287,147 
+Netherlands Amsterdam 16,033 16,491,461 
+New Zealand Wellington 103,737 4,076,140 
+Nicaragua Managua 49,998 5,570,129 
+Niger Niamey 489,189 12,525,094 
+Nigeria Abuja 356,667 131,859,731 
+Norway Oslo 125,181 4,610,820 
+Oman Muscat 82,031 3,102,229 
+Pakistan Islamabad 310,401 165,803,560 
+Palau Koror 177 20,579 
+Panama Panama City 30,193 3,191,319 
+Papua New Guinea Port Moresby 178,703 5,670,544 
+Paraguay Asunción 157,046 6,506,464 
+Peru Lima 496,223 28,302,603 
+Philippines Manila 115,830 89,468,677 
+Poland Warsaw 120,728 38,536,869 
+Portugal Lisbon 35,672 10,605,870 
+Qatar Doha 4,416 885,359 
+Romania Bucharest 91,699 22,303,552 
+Russia Moscow 6,592,735 142,893,540 
+Rwanda Kigali 10,169 8,648,248 
+St. Kitts and Nevis Basseterre 101 39,129 
+St. Lucia Castries 238 168,458 
+St. Vincent and the Grenadines Kingstown 150 117,848 
+Samoa Apia 1,137 176,908 
+San Marino San Marino 24 29,251 
+São Tomé and Príncipe São Tomé 386 193,413 
+Saudi Arabia Riyadh 756,981 27,019,731 
+Senegal Dakar 75,749 11,987,121 
+Serbia Belgrade 34,116 9,396,411 
+Seychelles Victoria 176 81,541 
+Sierra Leone Freetown 27,699 6,005,250 
+Singapore Singapore 267 4,492,150 
+Slovakia Bratislava 18,859 5,439,448 
+Slovenia Ljubljana 7,827 2,010,347 
+Solomon Islands Honiara 10,985 552,438 
+Somalia Mogadishu 246,199 8,863,338 
+South Africa Pretoria 471,008 44,187,637 
+Spain Madrid 194,896 40,397,842 
+Sri Lanka Colombo 25,332 20,222,240 
+Sudan Khartoum 967,493 41,236,378 
+Suriname Paramaribo 63,039 439,117 
+Swaziland Mbabane 6,704 1,136,334 
+Sweden Stockholm 173,731 9,016,596 
+Switzerland Bern 15,942 7,523,934 
+Syria Damascus 71,498 18,881,361 
+Taiwan Taipei 13,892 23,036,087 
+Tajikistan Dushanbe 55,251 7,320,815 
+Tanzania Dodoma 364,898 37,445,392 
+Thailand Bangkok 198,455 64,631,595 
+Togo Lomé 21,925 5,548,702 
+Tonga Nuku'alofa 289 114,689 
+Trinidad and Tobago Port-of-Spain 1,980 1,065,842 
+Tunisia Tunis 63,170 10,175,014 
+Turkey Ankara 301,382 70,413,958 
+Turkmenistan Ashgabat 188,455 5,042,920 
+Tuvalu Funafuti 10 11,810 
+Uganda Kampala 91,135 28,195,754 
+Ukraine Kyiv (Kiev) 233,089 46,710,816 
+United Arab Emirates Abu Dhabi 32,000 2,602,713 
+United Kingdom London 94,525 60,609,153 
+United States Washington, D.C. 3,718,691 298,444,215 
+Uruguay Montevideo 68,039 3,431,932 
+Uzbekistan Tashkent 172,741 27,307,134 
+Vanuatu Vila 4,710 208,869 
+Vatican City   0.17 932 
+Venezuela Caracas 352,143 25,730,435 
+Vietnam Hanoi 127,243 84,402,966 
+Western Sahara   102,703 278,600 
+Yemen Sanaá 203,849 21,456,188 
+Zambia Lusaka 290,584 11,502,010 
+Zimbabwe Harare 150,803 12,236,805
