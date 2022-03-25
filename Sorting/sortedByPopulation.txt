@@ -1,195 +1,195 @@
-Vatican City			932
-Tuvalu			11,810
-Nauru			13,287
-Palau			20,579
-San Marino			29,251
-Monaco			32,543
-Liechtenstein			33,987
-St. Kitts and Nevis			39,129
-Marshall Islands			60,422
-Dominica			68,910
-Antigua and Barbuda			69,108
-Andorra			71,201
-Seychelles			81,541
-Grenada			89,703
-Kiribati			105,432
-Micronesia			108,004
-Tonga			114,689
-St. Vincent and the Grenadines			117,848
-St. Lucia			168,458
-Samoa			176,908
-São Tomé and Príncipe			193,413
-Vanuatu			208,869
-Western Sahara			278,600
-Barbados			279,912
-Belize			287,730
-Iceland			299,388
-Bahamas			303,770
-Maldives			359,008
-Brunei			379,444
-Malta			400,214
-Cape Verde			420,979
-Suriname			439,117
-Luxembourg			474,413
-Djibouti			486,530
-Equatorial Guinea			540,109
-Solomon Islands			552,438
-Montenegro			630,548
-Comoros			690,948
-Bahrain			698,585
-Guyana			767,245
-Cyprus			784,301
-Qatar			885,359
-Fiji			905,949
-East Timor			1,062,777
-Trinidad and Tobago			1,065,842
-Swaziland			1,136,334
-Mauritius			1,240,827
-Estonia			1,324,333
-Gabon			1,424,906
-Guinea-Bissau			1,442,029
-Botswana			1,639,833
-Gambia			1,641,564
-Slovenia			2,010,347
-Lesotho			2,022,331
-Namibia			2,044,147
-Macedonia			2,050,554
-Latvia			2,274,735
-Bhutan			2,279,723
-Kuwait			2,418,393
-United Arab			2,602,713
-Jamaica			2,758,124
-Mongolia			2,832,224
-Armenia			2,976,372
-Liberia			3,042,004
-Oman			3,102,229
-Mauritania			3,177,388
-Panama			3,191,319
-Uruguay			3,431,932
-Albania			3,581,655
-Lithuania			3,585,906
-Congo, Republic of			3,702,314
-Lebanon			3,874,050
-Ireland			4,062,235
-Costa Rica			4,075,261
-New Zealand			4,076,140
-Central African Republic			4,303,356
-Moldova			4,466,706
-Singapore			4,492,150
-Croatia			4,494,749
-Bosnia and Herzegovina			4,498,976
-Norway			4,610,820
-Georgia			4,661,473
-Eritrea			4,786,994
-Turkmenistan			5,042,920
-Kyrgyzstan			5,213,898
-Finland			5,231,372
-Slovakia			5,439,448
-Denmark			5,450,661
-Togo			5,548,702
-Nicaragua			5,570,129
-Papua New Guinea			5,670,544
-Libya			5,900,754
-Jordan			5,906,760
-Sierra Leone			6,005,250
-Israel			6,352,117
-Laos			6,368,481
-Paraguay			6,506,464
-El Salvador			6,822,378
-Tajikistan			7,320,815
-Honduras			7,326,496
-Bulgaria			7,385,367
-Switzerland			7,523,934
-Benin			7,862,944
-Azerbaijan			7,961,619
-Burundi			8,090,068
-Austria			8,192,880
-Haiti			8,308,504
-Rwanda			8,648,248
-Somalia			8,863,338
-Bolivia			8,989,046
-Sweden			9,016,596
-Dominican Republic			9,183,984
-Serbia			9,396,411
-Guinea			9,690,222
-Chad			9,944,201
-Hungary			9,981,334
-Tunisia			10,175,014
-Czech Republic			10,235,455
-Belarus			10,293,011
-Belgium			10,379,067
-Portugal			10,605,870
-Greece			10,688,058
-Cuba			11,382,820
-Zambia			11,502,010
-Mali			11,716,829
-Senegal			11,987,121
-Angola			12,127,071
-Zimbabwe			12,236,805
-Guatemala			12,293,545
-Niger			12,525,094
-Malawi			13,013,926
-Ecuador			13,547,510
-Cambodia			13,881,427
-Burkina Faso			13,902,972
-Kazakhstan			15,233,244
-Chile			16,134,219
-Netherlands			16,491,461
-Cameroon			17,340,702
-Côte d'Ivoire			17,654,843
-Madagascar			18,595,469
-Syria			18,881,361
-Mozambique			19,686,505
-Sri Lanka			20,222,240
-Australia			20,264,082
-Yemen			21,456,188
-Romania			22,303,552
-Ghana			22,409,572
-Taiwan			23,036,087
-Korea, North			23,113,019
-Malaysia			24,385,858
-Venezuela			25,730,435
-Iraq			26,783,383
-Saudi Arabia			27,019,731
-Uzbekistan			27,307,134
-Uganda			28,195,754
-Nepal			28,287,147
-Peru			28,302,603
-Afghanistan			31,056,997
-Algeria			32,930,091
-Canada			33,098,932
-Morocco			33,241,259
-Kenya			34,707,817
-Tanzania			37,445,392
-Poland			38,536,869
-Argentina			39,921,833
-Spain			40,397,842
-Sudan			41,236,378
-Colombia			43,593,035
-South Africa			44,187,637
-Ukraine			46,710,816
-Myanmar (Burma)			47,382,633
-Korea, South			48,846,823
-Italy			58,133,509
-United Kingdom			60,609,153
-France			60,876,136
+Vatican City										932
+Tuvalu												11,810
+Nauru													13,287
+Palau													20,579
+San Marino											29,251
+Monaco												32,543
+Liechtenstein										33,987
+St. Kitts and Nevis								39,129
+Marshall Islands									60,422
+Dominica												68,910
+Antigua and Barbuda								69,108
+Andorra												71,201
+Seychelles											81,541
+Grenada												89,703
+Kiribati												105,432
+Micronesia											108,004
+Tonga													114,689
+St. Vincent and the Grenadines				117,848
+St. Lucia											168,458
+Samoa													176,908
+São Tomé and Príncipe							193,413
+Vanuatu												208,869
+Western Sahara										278,600
+Barbados												279,912
+Belize												287,730
+Iceland												299,388
+Bahamas												303,770
+Maldives												359,008
+Brunei												379,444
+Malta													400,214
+Cape Verde											420,979
+Suriname												439,117
+Luxembourg											474,413
+Djibouti												486,530
+Equatorial Guinea									540,109
+Solomon Islands									552,438
+Montenegro											630,548
+Comoros												690,948
+Bahrain												698,585
+Guyana												767,245
+Cyprus												784,301
+Qatar													885,359
+Fiji													905,949
+East Timor											1,062,777
+Trinidad and Tobago								1,065,842
+Swaziland											1,136,334
+Mauritius											1,240,827
+Estonia												1,324,333
+Gabon													1,424,906
+Guinea-Bissau										1,442,029
+Botswana												1,639,833
+Gambia												1,641,564
+Slovenia												2,010,347
+Lesotho												2,022,331
+Namibia												2,044,147
+Macedonia											2,050,554
+Latvia												2,274,735
+Bhutan												2,279,723
+Kuwait												2,418,393
+United Arab											2,602,713
+Jamaica												2,758,124
+Mongolia												2,832,224
+Armenia												2,976,372
+Liberia												3,042,004
+Oman													3,102,229
+Mauritania											3,177,388
+Panama												3,191,319
+Uruguay												3,431,932
+Albania												3,581,655
+Lithuania											3,585,906
+Congo, Republic of								3,702,314
+Lebanon												3,874,050
+Ireland												4,062,235
+Costa Rica											4,075,261
+New Zealand											4,076,140
+Central African Republic						4,303,356
+Moldova												4,466,706
+Singapore											4,492,150
+Croatia												4,494,749
+Bosnia and Herzegovina							4,498,976
+Norway												4,610,820
+Georgia												4,661,473
+Eritrea												4,786,994
+Turkmenistan										5,042,920
+Kyrgyzstan											5,213,898
+Finland												5,231,372
+Slovakia												5,439,448
+Denmark												5,450,661
+Togo													5,548,702
+Nicaragua											5,570,129
+Papua New Guinea									5,670,544
+Libya													5,900,754
+Jordan												5,906,760
+Sierra Leone										6,005,250
+Israel												6,352,117
+Laos													6,368,481
+Paraguay												6,506,464
+El Salvador											6,822,378
+Tajikistan											7,320,815
+Honduras												7,326,496
+Bulgaria												7,385,367
+Switzerland											7,523,934
+Benin													7,862,944
+Azerbaijan											7,961,619
+Burundi												8,090,068
+Austria												8,192,880
+Haiti													8,308,504
+Rwanda												8,648,248
+Somalia												8,863,338
+Bolivia												8,989,046
+Sweden												9,016,596
+Dominican Republic								9,183,984
+Serbia												9,396,411
+Guinea												9,690,222
+Chad													9,944,201
+Hungary												9,981,334
+Tunisia												10,175,014
+Czech Republic										10,235,455
+Belarus												10,293,011
+Belgium												10,379,067
+Portugal												10,605,870
+Greece												10,688,058
+Cuba													11,382,820
+Zambia												11,502,010
+Mali													11,716,829
+Senegal												11,987,121
+Angola												12,127,071
+Zimbabwe												12,236,805
+Guatemala											12,293,545
+Niger													12,525,094
+Malawi												13,013,926
+Ecuador												13,547,510
+Cambodia												13,881,427
+Burkina Faso										13,902,972
+Kazakhstan											15,233,244
+Chile													16,134,219
+Netherlands											16,491,461
+Cameroon												17,340,702
+Côte d'Ivoire										17,654,843
+Madagascar											18,595,469
+Syria													18,881,361
+Mozambique											19,686,505
+Sri Lanka											20,222,240
+Australia											20,264,082
+Yemen													21,456,188
+Romania												22,303,552
+Ghana													22,409,572
+Taiwan												23,036,087
+Korea, North										23,113,019
+Malaysia												24,385,858
+Venezuela											25,730,435
+Iraq													26,783,383
+Saudi Arabia										27,019,731
+Uzbekistan											27,307,134
+Uganda												28,195,754
+Nepal													28,287,147
+Peru													28,302,603
+Afghanistan											31,056,997
+Algeria												32,930,091
+Canada												33,098,932
+Morocco												33,241,259
+Kenya													34,707,817
+Tanzania												37,445,392
+Poland												38,536,869
+Argentina											39,921,833
+Spain													40,397,842
+Sudan													41,236,378
+Colombia												43,593,035
+South Africa										44,187,637
+Ukraine												46,710,816
+Myanmar (Burma)									47,382,633
+Korea, South										48,846,823
+Italy													58,133,509
+United Kingdom										60,609,153
+France												60,876,136
 Congo, Democratic Republic of the			62,660,551
-Thailand			64,631,595
-Iran			68,688,433
-Turkey			70,413,958
-Ethiopia			74,777,981
-Egypt			78,887,007
-Germany			82,422,299
-Vietnam			84,402,966
-Philippines			89,468,677
-Mexico			107,449,525
-Japan			127,463,611
-Nigeria			131,859,731
-Russia			142,893,540
-Bangladesh			147,365,352
-Pakistan			165,803,560
-Brazil			188,078,227
-Indonesia			245,452,739
-United States			298,444,215
-India			1,095,351,995
-China			1,313,973,713
+Thailand												64,631,595
+Iran													68,688,433
+Turkey												70,413,958
+Ethiopia												74,777,981
+Egypt													78,887,007
+Germany												82,422,299
+Vietnam												84,402,966
+Philippines											89,468,677
+Mexico												107,449,525
+Japan													127,463,611
+Nigeria												131,859,731
+Russia												142,893,540
+Bangladesh											147,365,352
+Pakistan												165,803,560
+Brazil												188,078,227
+Indonesia											245,452,739
+United States										298,444,215
+India													1,095,351,995
+China													1,313,973,713

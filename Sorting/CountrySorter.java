@@ -184,7 +184,14 @@ public class CountrySorter{
          
          // print out each country
          for(int i = 0; i < countryName.size(); i++){
-            pw.println(countryName.get(i) + "\t\t\t" + formatter.format(population.get(i)));
+            String out = "";
+            out += countryName.get(i);
+            int temp = 44 - countryName.get(i).length();
+            for(int j = 0 ; j < temp/3;j++){
+               out += "\t";
+            }
+            out += formatter.format(population.get(i));
+            pw.println(out);
          }
          
          // close the printwriter

@@ -8,6 +8,7 @@
 public class CountrySorterDriver{
    public static void main(String[] args){
       // initialize the sorter & prompt it to read data from the file
+      System.out.println("\t");
       CountrySorter sorter = new CountrySorter();
       sorter.readFile();
       
