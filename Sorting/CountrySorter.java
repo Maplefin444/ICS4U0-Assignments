@@ -1,7 +1,6 @@
-
 // imports
 import java.util.*;
-import java.text.NumberFormat;
+import java.text.*;
 import java.io.*;
 
 /**
@@ -25,32 +24,48 @@ public class CountrySorter{
    */
    private ArrayList<Integer> population = new ArrayList<Integer>();
    
-   public static void main(String[] args){
-      CountrySorter a = new CountrySorter();
-      a.readFile();
-      a.sortByPopulation();
-      a.printToFile("loggers.txt");
-   }
+   /**
+   * This method reads a list of countries and parses the data from Countries-Population.txt into the 4 internal parallel arraylists. 
+   */
    public void readFile(){
+      // these two lines handle exceptions where there are more than 4 words in a line - in this case, we cannot poinpoint the number of words that belong to the country or city
+      // for any i, lines[i] is the line for which the number of words in the country is not clear. wordamt[i] is the number of words that belong to the country in line number line[i]
       int[] lines = {50,53,54,57,67,68,76,89,90,91,105,109,111,112,116,120,125,133, 3, 5, 6, 15, 20, 21,24,26,28,31,32,33,37,38,39,40,41,45,49, 134, 144, 145, 146, 148, 149, 150, 154, 158, 160, 162, 175, 181, 182, 183, 184, 188, 191};
       int[] wordamt = {2,2,2,1,1,1,1,2,2,1,1,2,1,1,1,2,2,1,1,3,1,1,1,3,1,2,1,2,3,1,1,3,5,2,2,2,2, 3, 4, 2, 5, 2, 4, 2, 2, 2, 2, 2, 3, 1, 2, 2, 2, 2, 2};
+      
       try{
+         // initialize a reader for the default input file
          BufferedReader br = new BufferedReader(new FileReader("Countries-Population.txt"));
+         
+         // the current line number
          int count = 0;
+         
          while(true){
+            // get the next line
             String a = br.readLine();
+            
+            // if we reached the end of the file, break
             if(a == null) 
                break;
+              
+            // split the line
             String[] line = a.split(" ");
+            
+            // with 4 words, the data is unambiguous: "[countryName] [city name] [area] [population]"
             if(line.length == 4){
                countryName.add(line[0]);
                capital.add(line[1]);
                area.add(Double.parseDouble(line[2].replaceAll(",","")));
                population.add(Integer.parseInt(line[3].replaceAll(",","")));
             }
+            
+            // search through our exceptions
             for(int i = 0 ; i < lines.length; i++){
+               // if the lines coincide
                if(count == lines[i]){
+                  // country name
                   String cname = "";
+                  // the first wordamt[i] words are part of the country; add each word joined by a space
                   for(int j = 0; j < wordamt[i];j++){
                      if(j == wordamt[i]-1){
                         cname += line[j];
@@ -59,7 +74,11 @@ public class CountrySorter{
                         cname += line[j] + " ";
                      }
                   }
+                  
+                  // capital name
                   String capname = "";
+                  // of the remaining line, 2 are for area and population, the rest are for capital
+                  // add the remaining words, joined by a space
                   for(int j = 0 ; j < line.length - wordamt[i] - 2;j++){
                      if(j == line.length - wordamt[i] - 3){
                         capname += line[j+wordamt[i]];
@@ -69,16 +88,20 @@ public class CountrySorter{
                      }
                   }
                   
+                  // add each name, trimming their spaces
                   countryName.add(cname.trim());
                   capital.add(capname.trim());
+                  // parse the area and population, replacing commas with blanks to make it easier to parse
                   area.add(Double.parseDouble(line[line.length-2].replaceAll(",","")));
                   population.add(Integer.parseInt(line[line.length-1].replaceAll(",","")));
                }
             }
+            // update the current line
             count++;
          }
       }
       catch(Exception e){
+         // catch errors
          e.printStackTrace();
       }
    }
@@ -173,5 +196,43 @@ public class CountrySorter{
    */
    public void sortByPopulation(){
       sortByPopulation(0, countryName.size() - 1);
+   }
+   
+   /**
+   * This method internally sorts the lists by their country name, lexicographically increasing
+   */
+   public void sortByCountry(){
+      // the number of countries
+      int len = countryName.size();
+      
+      // run a selection sort
+      for(int i = 0; i < len - 1; i++){
+         // the index of the country with the "smallest" name, loop through all values after i, storing the minimum in mIndex
+         int mIndex = i;
+         for(int j = i + 1; j < len; j++){
+            if(countryName.get(j).compareToIgnoreCase(countryName.get(mIndex)) < 0){
+               mIndex = j;
+            }
+         }
+         
+         // swap i and mIndex
+         // temporary variables for mIndex
+         String cTmp = countryName.get(mIndex);
+         String caTmp = capital.get(mIndex);
+         double aTmp = area.get(mIndex);
+         int popTmp = population.get(mIndex);
+         
+         // set the country at mIndex to the country at i
+         countryName.set(mIndex, countryName.get(i));
+         capital.set(mIndex, capital.get(i));
+         area.set(mIndex, area.get(i));
+         population.set(mIndex, population.get(i));
+         
+         // set the country at i to the country originally at mIndex
+         countryName.set(i, cTmp);
+         capital.set(i, caTmp);
+         area.set(i, aTmp);
+         population.set(i, popTmp);
+      }
    }
 }
