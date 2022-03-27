@@ -100,7 +100,26 @@ public class StudentSorting{
    */
    public void printStudents(){
       for(int i = 0; i < marks.length; i++){
-         System.out.println(names[i] + " " + marks[i]);
+         System.out.println(names[i] + "     " + marks[i]);
+      }
+   }
+   
+   /**
+   * Write the students to a file. They will be written in the same way as in printStudents()
+   */
+   public void writeStudents(String fileName){
+      try{
+         // declare the writer
+         PrintWriter pw = new PrintWriter(new FileWriter(fileName));
+         
+         // print each student
+         for(int i = 0; i < marks.length; i++){
+            pw.println(names[i] + "     " + marks[i]);
+         }
+         
+         pw.close();
+      } catch (IOException e){
+         e.printStackTrace();
       }
    }
 }

@@ -17,11 +17,13 @@ public class StudentSortingDriver{
       System.out.println("---------- SORTED BY NAME --------------------");
       a.sortNames();
       a.printStudents();
+      a.writeStudents("A7-1-sorted-by-name.txt");
       
       // print out students sorted by mark (descending)
       System.out.println();
       System.out.println("---------- SORTED BY MARK --------------------");
       a.sortByMark();
       a.printStudents();
+      a.writeStudents("A7-1-sorted-by-mark.txt");
    }
 }
