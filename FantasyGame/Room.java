@@ -5,6 +5,6 @@ interface Room{
    String getRoomName();
    void setRoomName(String name);
    
-   int retrieveGold(Player c);
+   void retrieveGold(Player c);
    Item retrieveItem(Player c);
 }
