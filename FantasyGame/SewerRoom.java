@@ -1,3 +1,11 @@
+/*
+* James Huynh, Daniel Ye
+* April 18, 2022
+* Ms. Krasteva
+* This class implements one of the rooms in the game
+*/
+
+// imports
 import java.util.*;
 /**
 * This class is a room for the sewers area, implements Room interface

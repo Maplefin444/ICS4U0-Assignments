@@ -2,7 +2,7 @@
 * James Huynh, Daniel Ye
 * April 18, 2022
 * Ms. Krasteva
-* This class implement one of the Rooms in the Fantasy Game
+* This class implements one of the Rooms in the Fantasy Game
 */
 
 // imports

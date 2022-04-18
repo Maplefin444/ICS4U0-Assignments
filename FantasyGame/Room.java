@@ -1,3 +1,6 @@
+/**
+* An interface for what a Room should have
+*/
 interface Room{
    Item getItem();
    int getGold();
