@@ -10,4 +10,6 @@ interface Room{
    
    void retrieveGold(Player c);
    Item retrieveItem(Player c);
+   
+   void setTrapped(boolean trapped);
 }
