@@ -128,6 +128,18 @@ public class CastleRoom implements Room {
       return tmp;
    }
    
+   /**
+   * Set whether or not the room is trapped
+   * @param trapped whether or not the room is trapped
+   */
+   public void setTrapped(boolean trapped){
+      this.trapped = trapped;
+   }
+   
+   /**
+   * Makes a printable string for the current room
+   * @return The printable string
+   */
    public String toString(){
       return "Room " + name + "\n" + description + ".\nGold: " + gold + "\nTrapped: " + trapped;
    }
