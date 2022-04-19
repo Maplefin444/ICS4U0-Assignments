@@ -15,6 +15,10 @@ public class Castle extends Location{
    public Castle(Room r){
       super(r);
    }
+   /**
+   * Makes a printable string for the current room
+   * @return The printable string
+   */
    public String toString(){
       return "This is the castle. It currently has: " +  getRoomAmt() + " rooms.";
    }
