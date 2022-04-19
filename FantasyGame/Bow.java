@@ -12,11 +12,11 @@ public class Bow implements Item{
    /**
    * The amount of damage dealt by this bow
    */
-   int damage;
+   private int damage;
    
    /**
    * Class Constructor for a bow
-   * @param the amount of damage dealt by the bow
+   * @param damage The amount of damage dealt by the bow
    */
    public Bow(int damage){
       this.damage = damage;

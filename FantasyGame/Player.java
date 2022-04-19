@@ -39,13 +39,13 @@ public class Player{
    * @param health Health of the player
    * @param maxgold The max # of gold the character can have
    */
-   public Player(String name, int health,int maxgold){
+   public Player(String name, int health,int maxGold){
       this.name = name; 
       if(health < 0 || health > 100){
          this.health = 100;
       }
       else this.health = health;
-      this.maxGold = maxgold;
+      this.maxGold = maxGold;
       gold = 0;
       maxHealth = 100;
    }
