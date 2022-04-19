@@ -117,8 +117,10 @@ public class Player{
    * @return An integer, 0 if goes over max health, -1 if it kills, and 1 if it was successful
    */
    public int editHealth(int amt){
-      if(health + amt > maxHealth) 
+      if(health + amt > maxHealth){
+         health = maxHealth;
          return 0;
+      }
       else if(health + amt < 0){
          health = 0;
          return -1;
