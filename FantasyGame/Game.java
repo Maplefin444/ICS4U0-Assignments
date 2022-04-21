@@ -3,6 +3,12 @@
 * April 18, 2022
 * Ms. Krasteva
 * The main class that handles the game simulation
+* The story:
+* Three adventurers, Timmy (an elf), Tammy (a paladin), and Tommy (an elf), decide to go on an adventure to infiltrate the castle.
+* They enter the sewers, but find that it is trapped, but has lots of gold. Moving through the sewers, Tommy is struck by
+* a trap, and dies. The party continues, and makes it out into the castle by moving through a sewer grate.
+* They move through the castle and eventually meet the king, which they promptly fight. However, the entire party was struck
+* by traps, and were poisoned. The king does not fall to their attacks, and the party dies to poison.
 */
 
 // imports
