@@ -141,6 +141,6 @@ public class CastleRoom implements Room {
    * @return The printable string
    */
    public String toString(){
-      return "Room " + name + "\n" + description + ".\nGold: " + gold + "\nTrapped: " + trapped;
+      return "\nRoom " + name + "\n   " + description + ".\n   Gold: " + gold + "\n   Trapped: " + trapped;
    }
 }

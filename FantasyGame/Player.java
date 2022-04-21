@@ -34,6 +34,11 @@ public class Player{
    private Room room;
    
    /**
+   * Stores the item the player holds
+   */
+   private Item item;
+   
+   /**
    * Constructor for player
    * @param name Name of the player
    * @param health Health of the player
@@ -49,7 +54,13 @@ public class Player{
       gold = 0;
       maxHealth = 100;
    }
-   
+   /**
+   * Getter method for item
+   * @return Item
+   */
+   public Item getItem(){
+      return item;
+   }
    /**
    * Getter method for name
    * @return Name
@@ -94,6 +105,13 @@ public class Player{
       this.room = room;
    }
    /**
+   * Sets item
+   * @param item The item to set current item to
+   */
+   public void setItem(Item item){
+      this.item = item;
+   }
+   /**
    * Sets name
    * @param name Name to set to
    */
@@ -106,8 +124,10 @@ public class Player{
    * @return Whether or the gold was edited
    */
    public boolean editGold(int amt){
-      if(gold + amt > maxGold || gold + amt < 0) 
+      if(gold + amt > maxGold || gold + amt < 0){
+         gold = maxGold;
          return false;
+      }
       gold += amt;
       return true;
    }
