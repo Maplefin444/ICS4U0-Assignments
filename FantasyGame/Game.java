@@ -50,6 +50,11 @@ public class Game{
       System.out.println(tammy.toString() + "\n");
       System.out.println(tommy.toString() + "\n");
       
+      System.out.println("The party moves through (raids) the castle");
+      for(int i = 0; i < castle.getRoomAmt(); i++){
+         Room cur = castle.getRoom(i);
+         
+      }
       
    }
 }
