@@ -121,6 +121,6 @@ public class SewerRoom implements Room{
    * @return The printable string
    */
    public String toString(){
-      return "Room\nName: " + name + "\nGold: " + gold + "\nTrapped: " + trapped;
+      return "\nRoom\nName: " + name + "\nGold: " + gold + "\nTrapped: " + trapped;
    }
 }

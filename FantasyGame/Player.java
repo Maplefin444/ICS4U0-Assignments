@@ -193,12 +193,15 @@ public class Player{
    * @return returns whether or not the elf died
    */
    public boolean poisonTick(){
-      int res = editHealth((int) (getHealth() * -0.9));
-      if(res == 1) 
-         return true;
-      if(res == -1) 
+      if(poisoned){
+         int res = editHealth((int) (getHealth() * -0.1));
+         if(res == 1) 
+            return true;
+         if(res == -1) 
+            return false;
+         if(res == 0) throw new IllegalArgumentException();
          return false;
-      if(res == 0) throw new IllegalArgumentException();
+      }
       return false;
    }
 }
