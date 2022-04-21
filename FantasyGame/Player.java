@@ -194,7 +194,7 @@ public class Player{
    */
    public boolean poisonTick(){
       if(poisoned){
-         int res = editHealth((int) (getHealth() * -0.1));
+         int res = editHealth((int) (getHealth() * -0.5));
          if(res == 1) 
             return true;
          if(res == -1) 
