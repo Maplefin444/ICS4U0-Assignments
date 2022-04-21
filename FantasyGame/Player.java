@@ -37,15 +37,15 @@ public class Player{
    * Constructor for player
    * @param name Name of the player
    * @param health Health of the player
-   * @param maxgold The max # of gold the character can have
+   * @param maxGold The max # of gold the character can have
    */
-   public Player(String name, int health,int maxgold){
+   public Player(String name, int health,int maxGold){
       this.name = name; 
       if(health < 0 || health > 100){
          this.health = 100;
       }
       else this.health = health;
-      this.maxGold = maxgold;
+      this.maxGold = maxGold;
       gold = 0;
       maxHealth = 100;
    }
@@ -117,15 +117,35 @@ public class Player{
    * @return An integer, 0 if goes over max health, -1 if it kills, and 1 if it was successful
    */
    public int editHealth(int amt){
-      if(health + amt > maxHealth) 
-         return 0;
-      else if(health + amt < 0){
-         health = 0;
+      // health cannot change if dead
+      if(health == 0) {
          return -1;
       }
+      
+      // over max health
+      if(health + amt > maxHealth){
+         health = maxHealth;
+         return 0;
+      }
+      // dead
+      else if(health + amt < 0){
+         health = 0;
+         System.out.println(name + " has died :(");
+         return -1;
+      }
+      // default - valid change
       health += amt;
       return 1;
    }
+   
+   /**
+   * Returns if the player is dead
+   * @return if the player is dead
+   */
+   public boolean isDead(){
+      return health == 0;
+   }
+   
    /**
    * Changes the maximum amount of gold
    * @return If it was successful

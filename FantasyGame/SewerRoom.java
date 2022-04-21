@@ -107,6 +107,15 @@ public class SewerRoom implements Room{
       }
       return temp;
    }
+   
+   /**
+   * Set whether or not the room is trapped
+   * @param trapped whether or not the room is trapped
+   */
+   public void setTrapped(boolean trapped){
+      this.trapped = trapped;
+   }
+   
    /**
    * Makes a printable string for the current room
    * @return The printable string

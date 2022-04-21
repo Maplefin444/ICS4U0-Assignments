@@ -12,7 +12,7 @@ public class Sword implements Item{
    /**
    * The amount of damage dealt by this sword
    */
-   int damage;
+   private int damage;
    
    /**
    * Class Constructor for a sword
