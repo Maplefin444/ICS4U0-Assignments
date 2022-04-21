@@ -25,7 +25,7 @@ public class Game{
    public void test(){
       // fill in our party
       Player timmy = new Elf("Timmy", 1000, 100);
-      Player tammy = new Elf("Tammy", 100, 10);
+      Player tammy = new Paladin("Tammy", 100, 10, "sir");
       Player tommy = new Elf("Tommy", 1, 1);
       
       System.out.println("We are setting out on a journey!");
