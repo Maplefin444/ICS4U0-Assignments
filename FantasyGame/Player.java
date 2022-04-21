@@ -150,7 +150,6 @@ public class Player{
       // dead
       else if(health + amt < 0){
          health = 0;
-         System.out.println(name + " has died :(");
          return -1;
       }
       // default - valid change

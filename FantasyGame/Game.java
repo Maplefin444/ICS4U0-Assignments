@@ -36,7 +36,7 @@ public class Game{
       // initialize our two main locations
       Location sewer = new Sewer(new SewerRoom("Area 52", 12, false, new Sword(15)));
       sewer.addRoom(new SewerRoom("Treasure Room",100,true,new Bow(20)));
-      sewer.addRoom(new SewerRoom("Exit Room",5,true,new Sword(1)));
+      sewer.addRoom(new SewerRoom("Exit Room",1,true,new Sword(1)));
       Location castle = new Castle(new CastleRoom("The Throne", "The place of ruling", 15, new Bow(10), false));
       castle.addRoom(new CastleRoom("Dining Room","Where the royals dine",2,new Sword(2), true));
       castle.addRoom(new CastleRoom("Hallway","A hallway",2,new Sword(5),true));
@@ -115,11 +115,42 @@ public class Game{
       timmy.setRoom(cur);
       tammy.setRoom(cur);
       
-      System.out.println("In room 1:");
+      System.out.println("In room 2:");
+      System.out.println(timmy.toString() + "\n");
+      System.out.println(tammy.toString() + "\n");
+      cur.retrieveGold(tammy);
+      tammy.setItem(cur.retrieveItem(tammy));
+      System.out.println("Room 2 is trapped, oof!");
       System.out.println(timmy.toString() + "\n");
       System.out.println(tammy.toString() + "\n");
       
-      
+      System.out.println("The final room approaches, and the king begins to rage...");
+      System.out.println("[insert battle music here]");
+      System.out.println("Our players fight!");
+      System.out.println(tammy.getItem().useItem(tammy));
+      System.out.println(timmy.getItem().useItem(timmy));
+      System.out.println("... but they did nothing");
+      System.out.println("The king laughs as...");
+      tammy.poisonTick();
+      timmy.poisonTick();
+      System.out.println(timmy.toString() + "\n");
+      System.out.println(tammy.toString() + "\n");
+      System.out.println("Our heroes become nauseous...");
+      tammy.poisonTick();
+      timmy.poisonTick();
+      System.out.println(timmy.toString() + "\n");
+      System.out.println(tammy.toString() + "\n");
+      System.out.println("The room becomes littered with coughs...");
+      tammy.poisonTick();
+      timmy.poisonTick();
+      System.out.println(timmy.toString() + "\n");
+      System.out.println(tammy.toString() + "\n");
+      System.out.println("The king delivers a killing blow...");
+      timmy.editHealth(-20);
+      tammy.editHealth(-20);
+      System.out.println(timmy.toString() + "\n");
+      System.out.println(tammy.toString() + "\n");
+      System.out.println("Game Over...");      
    }
 }
 

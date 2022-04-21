@@ -9,6 +9,7 @@ public class Sewer extends Location{
    */
    public Sewer(Room r){
       super(r);
+      r.setTrapped(true);
    }
    
    /**
