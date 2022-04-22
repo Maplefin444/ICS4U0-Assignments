@@ -238,7 +238,7 @@ public class Picture extends SimplePicture
          }
       } 
       
-     for (int row = 166; row < 201; row++)
+      for (int row = 166; row < 201; row++)
       {
          for (int col = 238; col < 295; col++)
          {
@@ -247,6 +247,97 @@ public class Picture extends SimplePicture
             pixB.setColor(pixA.getColor());
          }
       } 
+   }
+   public void mirrorGull(){
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel pixA = null;
+      Pixel pixB = null;
+      for (int row = 227; row < 326; row++)
+      {
+         for (int col = 233; col < 345; col++)
+         {
+            pixA = pixels[row][col];
+            pixB = pixels[row][345-col+345];
+            pixB.setColor(pixA.getColor());
+         }
+      } 
+   }
+   public void copyBound(Picture fromPic, int startR, int startC, int endR, int endC, int locR, int locC)
+   {
+      Pixel fromPixel = null;
+      Pixel toPixel = null;
+      Pixel[][] toPixels = this.getPixels2D();
+      Pixel[][] fromPixels = fromPic.getPixels2D();
+      for (int fromRow = 0, toRow = locR; 
+            fromRow < endR && toRow < toPixels.length; 
+            fromRow++, toRow++)
+      {
+         for (int fromCol = startC, toCol = locC; 
+               fromCol < endC && toCol < toPixels[0].length;  
+               fromCol++, toCol++)
+         {
+            fromPixel = fromPixels[fromRow][fromCol];
+            toPixel = toPixels[toRow][toCol];
+            toPixel.setColor(fromPixel.getColor());
+         }
+      }   
+   }
+   public void myCollage(){
+      Picture gdog = new Picture("dog.jpg");
+      gdog.grayscale();
+      this.copyBound(gdog,127,129,368,407,0,0);
+      Picture bdog = new Picture("dog.jpg");
+      bdog.zeroRed();
+      bdog.zeroGreen();
+      this.copyBound(bdog,127,129,368,407,300,0);
+      Picture rdog = new Picture("dog.jpg");
+      rdog.zeroBlue();
+      rdog.zeroGreen();
+      this.copyBound(rdog,127,129,368,407,0,278);
+      Picture grdog = new Picture("dog.jpg");
+      grdog.zeroRed();
+      grdog.zeroBlue();
+      this.copyBound(grdog,127,129,368,407,300,278);
+   }
+   public void edgeDetection2(int edgeDist)
+   {
+      Picture temp = new Picture(this);
+      Pixel leftPixel = null;
+      Pixel rightPixel = null;
+      Pixel[][] pixels = this.getPixels2D();
+      Color rightColor = null;
+      for (int row = 0; row < pixels.length; row++)
+      {
+         for (int col = 0; 
+               col < pixels[0].length-1; col++)
+         {
+            leftPixel = pixels[row][col];
+            rightPixel = pixels[row][col+1];
+            rightColor = rightPixel.getColor();
+            if (leftPixel.colorDistance(rightColor) > 
+                 edgeDist)
+               leftPixel.setColor(Color.BLACK);
+            else
+               leftPixel.setColor(Color.WHITE);
+         }
+      }
+      Pixel[][] arr = temp.getPixels2D();
+      Pixel bpix = null;
+      Pixel tpix = null;
+      Color bcol = null;
+      for (int row = 0; row < pixels.length-1; row++)
+      {
+         for (int col = 0; 
+               col < pixels[0].length; col++)
+         {
+            tpix = pixels[row][col];
+            bpix = pixels[row+1][col];
+            bcol = bpix.getColor();
+            if (tpix.colorDistance(bcol) > 
+                 edgeDist)
+               leftPixel.setColor(Color.BLACK);
+         }
+      }
    }
    //-----------------------------------------------------------------------------------Method adding ends here
    /** Method that mirrors the picture around a 

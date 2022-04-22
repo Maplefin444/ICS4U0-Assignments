@@ -67,6 +67,30 @@ public class PictureTester
       snowman.mirrorArms();
       snowman.explore();
    }
+   public static void testMirrorGull(){
+      Picture gull = new Picture("seagull.jpg");
+      gull.explore();
+      gull.mirrorGull();
+      gull.explore();
+   }
+      public static void testCopyBound()
+   {
+      Picture img = new Picture("dog.jpg");
+      img.explore();
+      img.copyBound(img,0,0,200,200,200,200);
+      img.explore();
+   }
+   public static void testMyCollage(){
+      Picture canvas = new Picture("640x480.jpg");
+      canvas.myCollage();
+      canvas.explore();
+   }
+   public static void testEdgeDetection2()
+   {
+      Picture swan = new Picture("swan.jpg");
+      swan.edgeDetection2(10);
+      swan.explore();
+   }
    //-------------------------------------------New methods end here
    /** Method to test mirrorVertical */
    public static void testMirrorVertical()
@@ -126,6 +150,8 @@ public class PictureTester
       //testMirrorDiagonal();
       //testCollage();
       //testCopy();
+      //testCopyBound();
+      //testMyCollage();
       //testEdgeDetection();
       //testEdgeDetection2();
       //testChromakey();
