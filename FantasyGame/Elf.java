@@ -9,10 +9,10 @@ public class Elf extends Player{
    * Constructor for elf.
    * @param name The elf's name
    * @param health The starting health
-   * @param maxgold The maximum gold that can be held
+   * @param maxGold The maximum gold that can be held
    */
-   public Elf(String name, int health,int maxgold){
-      super(name,health,maxgold);
+   public Elf(String name, int health,int maxGold){
+      super(name,health,maxGold);
    }
    /**
    * Returns a string describing the elf
