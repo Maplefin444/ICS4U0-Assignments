@@ -16,7 +16,7 @@ public class Sword implements Item{
    
    /**
    * Class Constructor for a sword
-   * @param the amount of damage dealt by the sword
+   * @param damage the amount of damage dealt by the sword
    */
    public Sword(int damage){
       this.damage = damage;

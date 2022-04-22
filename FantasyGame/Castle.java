@@ -12,6 +12,10 @@ import java.util.*;
 * The setting that the Characters are stationed in.
 */
 public class Castle extends Location{
+   /**
+   * Constructor for Castle class, calls the superclass.
+   * @param r The room to start with.
+   */
    public Castle(Room r){
       super(r);
    }
