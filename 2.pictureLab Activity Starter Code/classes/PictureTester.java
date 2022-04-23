@@ -91,6 +91,12 @@ public class PictureTester
       swan.edgeDetection2(10);
       swan.explore();
    }
+   public static void testEdgeDetection3()
+   {
+      Picture swan = new Picture("swan.jpg");
+      swan.edgeDetection3(10);
+      swan.explore();
+   }
    //-------------------------------------------New methods end here
    /** Method to test mirrorVertical */
    public static void testMirrorVertical()
@@ -154,6 +160,7 @@ public class PictureTester
       //testMyCollage();
       //testEdgeDetection();
       //testEdgeDetection2();
+      //testEdgeDetection3();
       //testChromakey();
       //testEncodeAndDecode();
       //testGetCountRedOverValue(250);

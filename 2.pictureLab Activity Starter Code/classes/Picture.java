@@ -321,21 +321,47 @@ public class Picture extends SimplePicture
                leftPixel.setColor(Color.WHITE);
          }
       }
-      Pixel[][] arr = temp.getPixels2D();
       Pixel bpix = null;
       Pixel tpix = null;
       Color bcol = null;
+      Pixel[][] arr = temp.getPixels2D();
       for (int row = 0; row < pixels.length-1; row++)
       {
          for (int col = 0; 
                col < pixels[0].length; col++)
          {
-            tpix = pixels[row][col];
-            bpix = pixels[row+1][col];
+            tpix = arr[row][col];
+            bpix = arr[row+1][col];
             bcol = bpix.getColor();
             if (tpix.colorDistance(bcol) > 
                  edgeDist)
-               leftPixel.setColor(Color.BLACK);
+               pixels[row][col].setColor(Color.BLACK);
+         }
+      }
+   }
+   public void edgeDetection3(int edgeDist){
+      Picture temp = new Picture(this);
+      Pixel pixA = null;
+      Pixel pixB = null;
+      Pixel[][] pixels = this.getPixels2D();
+      Color pixBc = null;
+      Pixel[][] arr = temp.getPixels2D();
+      for (int row = 1; row < pixels.length-1; row++)
+      {
+         for (int col = 1; col < pixels[0].length-1; col++)
+         {
+            int count = 0;
+            pixA = arr[row][col];
+            pixB = arr[row][col+1];
+            if (pixA.colorDistance(pixB.getColor()) > edgeDist) count++;
+            pixB = arr[row][col-1];
+            if (pixA.colorDistance(pixB.getColor()) > edgeDist) count++;
+            pixB = arr[row+1][col];
+            if (pixA.colorDistance(pixB.getColor()) > edgeDist) count++;
+            pixB = arr[row-1][col];
+            if (pixA.colorDistance(pixB.getColor()) > edgeDist) count++;
+            if(count > 2) pixels[row][col].setColor(Color.BLACK);
+            else pixels[row][col].setColor(Color.WHITE);
          }
       }
    }
