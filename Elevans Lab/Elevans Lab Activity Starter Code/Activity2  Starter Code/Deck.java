@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * The Deck class represents a shuffled deck of cards.
@@ -20,7 +19,7 @@ public class Deck {
 	 */
 	private int size;
 
-
+   //----------------------------------------------------implemented methods starting from here
 	/**
 	 * Creates a new <code>Deck</code> instance.<BR>
 	 * It pairs each element of ranks with each element of suits,
@@ -30,7 +29,12 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+      cards = new ArrayList<Card>();
+		for(int i = 0 ; i < ranks.length; i++){
+         for(int j = 0; j < suits.length;j++){
+            cards.add(new Card(ranks[i],suits[j],values[i]));
+         }
+      }
 	}
 
 
@@ -39,7 +43,7 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.isEmpty();
 	}
 
 	/**
@@ -47,7 +51,7 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.size();
 	}
 
 	/**
@@ -55,7 +59,7 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		Collections.shuffle(cards);
 	}
 
 	/**
@@ -64,9 +68,10 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+      if(cards.isEmpty()) return null;
+		return cards.remove(cards.size()-1);
 	}
-
+   //--------------------------------------------------------------------method implementation ends here
 	/**
 	 * Generates and returns a string representation of this deck.
 	 * @return a string representation of this deck.

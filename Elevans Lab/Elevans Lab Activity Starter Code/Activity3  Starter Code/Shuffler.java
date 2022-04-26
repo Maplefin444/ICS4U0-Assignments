@@ -41,7 +41,8 @@ public class Shuffler {
 		}
 		System.out.println();
 	}
-
+   
+   //---------------------------------------------------implemented these methods
 
 	/**
 	 * Apply a "perfect shuffle" to the argument.
@@ -50,7 +51,21 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] shuffle = new int[values.length];
+      int mid = values.length/2;
+      int ind = 0;
+      for(int i = 0 ; i < mid;i++){
+         shuffle[ind] = values[i];
+         ind+=2;
+      }
+      ind = 1;
+      for(int i = mid ; i < values.length;i++){
+         shuffle[ind] = values[i];
+         ind+=2;
+      }
+      for(int i = 0; i < values.length;i++){
+         values[i] = shuffle[i];
+      }
 	}
 
 	/**
@@ -65,6 +80,12 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+      for(int i = values.length-1;i > 0;i--){
+         int loc = (int) (Math.random() * (i+1));
+         int temp = values[i];
+         values[i] = values[loc];
+         values[loc] = temp;
+      }
 	}
+   //-------------------------------------------------------------------method adding ends here
 }
