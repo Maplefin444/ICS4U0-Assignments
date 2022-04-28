@@ -52,5 +52,8 @@ public class DeckTester {
 		System.out.println();
 
 		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
+      //------------------------------------------added code here
+      Deck deck = new Deck(new String[] {"Ace","King","Queen","Jack","10","9","8","7","6","5","4","3","2"}, new String[] {"Spades","Hearts","Diamonds","Clubs"}, new int[] {11,10,10,10,10,9,8,7,6,5,4,3,2});
+      System.out.println(deck.toString());
 	}
 }

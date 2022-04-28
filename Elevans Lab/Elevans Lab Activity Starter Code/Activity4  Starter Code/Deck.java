@@ -56,13 +56,28 @@ public class Deck {
 	public int size() {
 		return size;
 	}
-
+   
+   //--------------------------------------------this method was implemented
 	/**
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		Card[] shuffle = new Card[cards.size()];
+      int mid = cards.size()/2;
+      int ind = 0;
+      for(int i = 0 ; i < mid;i++){
+         shuffle[ind] = cards.get(i);
+         ind+=2;
+      }
+      ind = 1;
+      for(int i = mid ; i < cards.size();i++){
+         shuffle[ind] = cards.get(i);
+         ind+=2;
+      }
+      for(int i = 0; i < cards.size();i++){
+         cards.set(i,shuffle[i]);
+      }
 	}
 
 	/**
